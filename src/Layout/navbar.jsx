@@ -5,7 +5,7 @@
   import '../css/Utilidades.css';
   import logoNavBar from '../img/gpac_logo.svg'
   import Bell from '../img/icons/bell.svg'
-  import profilePic from '../img/icons/bell.svg'
+  //import profilePic from '../img/icons/bell.svg'
 
 //   const inicio = css`
 //   width: 100%;
@@ -62,6 +62,15 @@ class UserPic extends Component{
                           align-items: center;
                           .l-menu-profile{
                               display: flex;
+                              align-items: center;
+                              img{
+                                  width: 54px;
+                                  height: 54px;
+                                  object-fit: cover;
+                                  object-position: center;
+                                  border-radius: 50%; 
+                                  margin: 0 10px;
+                              }
                           }
                       }
   
@@ -81,7 +90,7 @@ class UserPic extends Component{
                               }} alt=""/>
                               <div className="l-menu-profile">
                                   <User userName="Profile" />
-                                  <UserPic src={profilePic}/>
+                                  <img src={`https://images.unsplash.com/photo-1529092419721-e78fb7bddfb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4968&q=80`} alt=""/>
                               </div>
                           </div>
                     </div>
