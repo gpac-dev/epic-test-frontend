@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import NavBar from '../components/navbar';
+import Layout from '../Layout/layout';
 
 
 
 class Dashboard extends Component {
     render(){
         return(
-            <div>
-            <NavBar></NavBar>
-        </div>
+            <React.Fragment>
+                <Layout/>
+            </React.Fragment>
         )
     }
 }
