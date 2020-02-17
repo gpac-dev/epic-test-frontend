@@ -8,9 +8,6 @@ import dots from '../src/img/dots.svg';
 import doted from '../src/img/dots.svg';
 import gpac from '../src/img/GPAC-logo-GB.png';
 import wolfBack from '../src/img/wolf-back.jpg';
-import Primary from '../src/components/test/test';
-import UncontrolledLottie from './components/lottie';
-//import General from './css/global';
 //import color from '../src/css/color';
 //import styled from '@emotion/styled';
 
@@ -186,18 +183,16 @@ function App() {
                 <img className="l-login-brand" src={gpac} alt=""/>
                
                 <form action="">
-                    <UncontrolledLottie/>
                     <p className=" u-Montserrat35 u-margin-30 u-text-900 l-display">Do more than just work for a living</p>
-                    {/* <General/> */}
                     
 
                     <input className="u-margin-15 " type="text" placeholder="Username"/>
 
                     <input className="u-margin-15" type="text" placeholder="Password"/>
-                    {/* <button className="u-margin-15">
+                    <button className="u-margin-15">
                         Log in
-                    </button> */}
-                    <Primary login={'Log in'}/>
+                    </button> 
+                    {/* <Primary login={'Log in'}/> */}
                     
                     <p className="u-margin-15 l-password">Forgot your password?</p>
                 </form>
