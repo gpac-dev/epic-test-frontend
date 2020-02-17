@@ -1,53 +1,95 @@
   /** @jsx jsx */
-
+  import { Component } from 'react';
   import { jsx, css, Global } from '@emotion/core';
   import '../css/Main.css';
   import '../css/Utilidades.css';
   import logoNavBar from '../img/gpac_logo.svg'
+  import Bell from '../img/icons/bell.svg'
+  import profilePic from '../img/icons/bell.svg'
 
 //   const inicio = css`
 //   width: 100%;
 //   height: 72px;
 //   box-shadow: 0px 3px 12px #00000010;
 //   `;
+    
+
+class User extends Component{
+    render(){
+        return(
+            <div>
+                {this.props.userName}
+            </div>
+        )
+    }
+}
+
+class UserPic extends Component{
+    render(){
+        return(
+            <div>
+                <img src={this.props.profilePic} alt=""/>
+            </div>
+        )
+    }
+}
+
+
+  class NavBar extends Component{
+      render(){
+        return(
+            <div>
+                <Global styles={css`
+                  .l-navbar {
+                  width: 100%;
+                  height: 72px;
+                  box-shadow: 0px 3px 12px #00000010;
+                  background-color: White;
+                  padding: 0 20px;
+                  display: flex;
+                      &-flex{
+                          display: flex;
+                          width: 100%;
+                          justify-content: space-between;
+                      }
+                      &-logo{
+                          max-width: 132px;
+                          width: 100%;
+                          height: auto;
+                      }
+                      &-menu{
+                          display: flex;
+                          align-items: center;
+                          .l-menu-profile{
+                              display: flex;
+                          }
+                      }
   
-  
-
-
-  const NavBar = () =>{
-      return(
-          <div>
-              <Global styles={css`
-                .l-navbar {
-                width: 100%;
-                height: 72px;
-                box-shadow: 0px 3px 12px #00000010;
-                background-color: White;
-                padding: 0 20px;
-                display: flex;
-                    &-flex{
-                        display: flex;
-                        width: 100%;
-                    }
-                    &-logo{
-                        max-width: 132px;
-                        width: 100%;
-                        height: auto;
-                    }
-
-                }
-            `}
-              />
-              <div className="l-navbar">
-                  <div className="l-navbar-flex">
-                        <img src={logoNavBar} className="l-navbar-logo" alt=""/>
-                        <div >
-
-                        </div>
-                  </div>
-              </div>
-          </div>
-      )
+                  }
+              `}
+                />
+                <div className="l-navbar">
+                    <div className="l-navbar-flex">
+                          <img src={logoNavBar} className="l-navbar-logo" alt=""/>
+                          <div className="l-navbar-menu" css={{
+                                  maxWidth: '210px',
+                                  width: '100%'
+                                  }}>
+                              <img src={Bell} css={{
+                                  width: '28px',
+                                  height: '28px'
+                              }} alt=""/>
+                              <div className="l-menu-profile">
+                                  <User userName="Profile" />
+                                  <UserPic src={profilePic}/>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        );
+      }
+     
 
   }
 
