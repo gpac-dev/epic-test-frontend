@@ -60,6 +60,9 @@
                   flex-direction: column;
                   top: calc(100% - 60%);
                   position: absolute;
+                  width: 100%;
+                  padding: 0 20px;
+                  max-width: 371px;
               }
               
               form > p{
@@ -68,7 +71,8 @@
               
               input{
                   background: #FFFFFF 0% 0% no-repeat padding-box;
-                  width: 376px;
+                  max-width: 376px;
+                  width: 100%;
                   height: 60px;
                   padding: 0 25px;
                   border: none;
@@ -93,7 +97,6 @@
               }
               
               form > .l-password {
-                  color: #FFFFFF;
                   opacity: 0.29;
                   text-align: right;
                   align-items: flex-end;
@@ -130,6 +133,7 @@
       }
       input{
           width: 100%;
+          align-self: flex-end;
       }
       .l-login-brand{
           margin: auto;
@@ -175,14 +179,14 @@
           <div css={logginBox}>
               <div className ="l-login-dots">
                   <img className="l-login-dots-1" src={dots} alt=""/>
-                  <p className=" u-Montserrat35 u-margin-30 u-text-900 l-work">Do more than just work for a living</p>
+                  <p className=" u-Roboto35 u-margin-30 u-text-700 l-work">Do more than just work for a living</p>
                   <img className="l-login-dots-2" src={doted} alt=""/>
               </div>
               <div className="l-login-box">
                   <img className="l-login-brand" src={gpac} alt=""/>
                  
                   <form action="">
-                      <p className=" u-Montserrat35 u-margin-30 u-text-900 l-display">Do more than just work for a living</p>
+                      <p className=" u-Roboto35 u-margin-30 u-text-700 l-display">Do more than just work for a living</p>
                       
   
                       <input className="u-margin-15 " type="text" placeholder="Username"/>

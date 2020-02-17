@@ -36,33 +36,32 @@ TIPOGRAFIA
 
 
 
-.u-Montserrat86{ font-size:calc(25px + (86 - 25) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
-.u-Montserrat68 { font-size:calc(23px + (68 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
-.u-Montserrat60 { font-size:calc(23px + (60 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
-.u-Montserrat61 { font-size:calc(23px + (61 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
-.u-Montserrat54 { font-size:calc(23px + (54 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
-.u-Montserrat50 { font-size:calc(23px + (50 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
-.u-Montserrat38{font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1920 - 320)));}
-.u-Montserrat35{font-size:calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));}
-.u-Montserrat30{font-size:calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));}
-.u-Montserrat27{font-size:calc(18px + (27 - 18) * ((100vw - 320px) / (1920 - 320)));}
-.u-Montserrat24{font-size:calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));}
-.u-Montserrat22{font-size:calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));}
-.u-Montserrat18{font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto86{ font-size:calc(25px + (86 - 25) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto68 { font-size:calc(23px + (68 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto60 { font-size:calc(23px + (60 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto61 { font-size:calc(23px + (61 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto54 { font-size:calc(23px + (54 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto50 { font-size:calc(23px + (50 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto38{font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto35{font-size:calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto30{font-size:calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto27{font-size:calc(18px + (27 - 18) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto24{font-size:calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto22{font-size:calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto18{font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));}
 
 
 
 
 /*Peso tipográfico */
+.u-text-300{font-weight: 300;}
 .u-text-400{font-weight: 400;}
-.u-text-600{font-weight: 600;}
-.u-text-600{font-weight: 600;}
+.u-text-500{font-weight: 500;}
 .u-text-700{font-weight: 700;}
-.u-text-900{font-weight: 900;}
 
 
-.u-Black{font-family: 'MontserratNeue-Black' !important;}
-.u-Light{font-family: 'MontserratNeue-Light' !important;}
+.u-Black{font-family: 'Roboto' !important;}
+.u-Light{font-family: 'Roboto' !important;}
 
 .u-upper{text-transform: uppercase;}
 .u-lower{text-transform: lowercase;}
@@ -110,53 +109,6 @@ ESTILOS DE IMÁGEN Y COLOR
 .u-green{color: var(--green);}
 .u-red{color: var(--red)}
 
-.u-square-top {
- border-top: 13px solid snow;
- max-width: 440px;
- width: 100%;
- display: block;
- margin: auto;
- border-left: 13px solid snow;
- height: 92px;
- border-right: 13px solid snow;
-}
-
-.u-square-bottom {
- border-bottom:  13px solid snow;
- max-width: 440px;
- width: 100%;
- display: block;
- margin: auto;
- border-left: 13px solid snow;
- height: 92px;
- border-right: 13px solid snow;
-}
-
-
-.u-square-top-dark {
- border-top: 13px solid var(--dark);
- max-width: 440px;
- width: 100%;
- display: block;
- margin: auto;
- border-left: 13px solid var(--dark);
- height: 92px;
- border-right: 13px solid var(--dark);
-}
-
-.u-square-bottom-dark {
- border-bottom:  13px solid var(--dark);
- max-width: 440px;
- width: 100%;
- display: block;
- margin: auto;
- border-left: 13px solid var(--dark);
- height: 92px;
- border-right: 13px solid var(--dark);
-}
-
-
-
 
 
 /*Background */
@@ -166,14 +118,6 @@ ESTILOS DE IMÁGEN Y COLOR
 .u-back-green{background-color: var(--green);}
 .u-back-red{background-color: var(--red);}
 
-.u-back-white-let{background-color: White; padding: 0 10px; vertical-align: baseline; display: inline-flex;}
-.u-back-dark-let{background-color: var(--dark); padding: 0 10px; vertical-align: baseline; display: inline-flex;}
-.u-back-electric-let{background-color: var(--electric); padding: 0 10px; vertical-align: baseline; display: inline-flex; }
-.u-back-green-let{background-color: var(--green); padding: 0 10px; vertical-align: baseline; display: inline-flex;}
-.u-back-red-let{background-color: var(--red); padding: 0 10px; vertical-align: baseline; display: inline-flex;}
-
-
-.square-min{width: 17px; height: 17px; display: inline-block;}
 
 
 /*//////////////////////////////////////////////////

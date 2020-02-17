@@ -1,8 +1,7 @@
 /*-----------------------------------------------------------------------------
 ESTILOS BASE TIPOGRAFÍA | VARIABLES |
 --------------------------------------------------------------------------------*/
-
-
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
 :root {
     --maxlayout: 1920px;
@@ -16,20 +15,20 @@ ESTILOS BASE TIPOGRAFÍA | VARIABLES |
   --red: #F91819;
 }
 
-* {box-sizing: border-box; font-family: 'Montserrat', sans-serif; line-height: normal;}
+* {box-sizing: border-box; font-family: 'Roboto', sans-serif; line-height: normal;}
 
 
 html {scroll-behavior: smooth;}
 
 
 
-ul {padding-left: 0; margin: 0; font-family: 'Montserrat', sans-serif;}
+ul {padding-left: 0; margin: 0; font-family: 'Roboto', sans-serif;}
 
-li {list-style: none; font-family: 'Montserrat', sans-serif;}
+li {list-style: none; font-family: 'Roboto', sans-serif;}
 body {margin: 0; padding: 0; }
 
 a {
-  text-decoration: none;font-family: 'Montserrat', sans-serif;
+  text-decoration: none;font-family: 'Roboto', sans-serif;
   color: var(--gris);
 
 }

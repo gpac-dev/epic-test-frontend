@@ -41,6 +41,9 @@
               <div className="l-navbar">
                   <div className="l-navbar-flex">
                         <img src={logoNavBar} className="l-navbar-logo" alt=""/>
+                        <div >
+
+                        </div>
                   </div>
               </div>
           </div>
