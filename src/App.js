@@ -9,6 +9,8 @@ import doted from '../src/img/dots.svg';
 import gpac from '../src/img/GPAC-logo-GB.png';
 import wolfBack from '../src/img/wolf-back.jpg';
 import Primary from '../src/components/test/test';
+import UncontrolledLottie from './components/lottie';
+//import General from './css/global';
 //import color from '../src/css/color';
 //import styled from '@emotion/styled';
 
@@ -71,10 +73,10 @@ height: 100%;
             input{
                 background: #FFFFFF 0% 0% no-repeat padding-box;
                 width: 376px;
-                height: 77px;
+                height: 60px;
                 padding: 0 25px;
                 border: none;
-                border-radius: 3px;
+                border-radius: 30px;
                 -webkit-appearance: none;
                 box-shadow: 0px 3px 12px #0000000F;;
               -moz-appearance: none;
@@ -84,10 +86,14 @@ height: 100%;
                 border-radius: 3px;
                 background-color: #4056F4;
                 color: White;
-                width: 103px;
-                height: 37px;
+                width: 188px;
+                height: 50px;
+                margin-top: 10px;
                 border: none;
                 align-self: flex-end;
+                font-size: 18px;
+                font-weight: 700;
+                border-radius: 30px;
             }
             
             form > .l-password {
@@ -178,9 +184,15 @@ function App() {
             </div>
             <div className="l-login-box">
                 <img className="l-login-brand" src={gpac} alt=""/>
+               
                 <form action="">
+                    <UncontrolledLottie/>
                     <p className=" u-Montserrat35 u-margin-30 u-text-900 l-display">Do more than just work for a living</p>
+                    {/* <General/> */}
+                    
+
                     <input className="u-margin-15 " type="text" placeholder="Username"/>
+
                     <input className="u-margin-15" type="text" placeholder="Password"/>
                     {/* <button className="u-margin-15">
                         Log in
