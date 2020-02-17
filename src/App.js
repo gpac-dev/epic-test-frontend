@@ -1,4 +1,6 @@
-import React from 'react';
+  /** @jsx jsx */
+
+import { jsx, css } from '@emotion/core';
 import '../src/css/App.css';
 import '../src/css/Main.css';
 import '../src/css/Utilidades.css';
@@ -6,13 +8,169 @@ import dots from '../src/img/dots.svg';
 import doted from '../src/img/dots.svg';
 import gpac from '../src/img/GPAC-logo-GB.png';
 import wolfBack from '../src/img/wolf-back.jpg';
-import Primary from '../src/components/test/test'
-//import global from '../src/css/global'
+import Primary from '../src/components/test/test';
+//import color from '../src/css/color';
+//import styled from '@emotion/styled';
+
+const dark = 'tomato';
+
+const containerBox = css`
+  height: 100vh;
+  width: 100%;
+  background-color: ${dark};
+`;
+
+
+const logginBox = css`
+height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ECEEF2;
+    .l-login{
+        &-brand{
+            position: absolute;
+            top: 59px;
+            max-width: 415px;
+            width: 100%;
+        }
+        &-dots{
+            width: 606px;
+            height: 499px;
+            position: relative;
+            margin-left: 4%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            &-1{
+                align-self: flex-start;
+            }
+            &-2{
+                align-self: flex-end;
+            }
+        }
+       
+        &-box{
+            max-width: 456px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            z-index: 2;  
+            form{
+                display: flex;
+                flex-direction: column;
+                top: calc(100% - 60%);
+                position: absolute;
+            }
+            
+            form > p{
+                text-align: center;
+            }
+            
+            input{
+                background: #FFFFFF 0% 0% no-repeat padding-box;
+                width: 376px;
+                height: 77px;
+                padding: 0 25px;
+                border: none;
+                border-radius: 3px;
+                -webkit-appearance: none;
+                box-shadow: 0px 3px 12px #0000000F;;
+              -moz-appearance: none;
+            }
+            
+            button{
+                border-radius: 3px;
+                background-color: #4056F4;
+                color: White;
+                width: 103px;
+                height: 37px;
+                border: none;
+                align-self: flex-end;
+            }
+            
+            form > .l-password {
+                color: #FFFFFF;
+                opacity: 0.29;
+                text-align: right;
+                align-items: flex-end;
+            }
+        }
+        
+    }
+
+
+@media (max-width: 1032px){
+    .l-work{
+        display: none;
+    }
+}
+
+@media (min-width: 1032px){
+    .l-display{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1032px){
+    .l-display{
+        display: block;
+    }
+    .l-login-box{
+        max-width: 80%;
+        left: 0;
+        margin: auto;
+    }
+    form{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .l-login-brand{
+        margin: auto;
+        left: 0;
+        right: 0;
+    }
+    .l-clip{
+        clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+        width: 100%;
+        height: 42%;
+
+    }
+}
+    
+
+`;
+
+
+const wolfFill = css`
+clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+position: absolute;
+height: 45%;
+width: 45%;
+bottom: 0;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: ${wolfBack};
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+`;
+
+
+
+
 
 function App() {
   return (
-    <div className="g-100 u-back-dark l-login__container">
-        <div className=" l-login">
+    <div css={containerBox}>
+        <div css={logginBox}>
             <div className ="l-login-dots">
                 <img className="l-login-dots-1" src={dots} alt=""/>
                 <p className=" u-Montserrat35 u-margin-30 u-text-900 l-work">Do more than just work for a living</p>
@@ -32,8 +190,8 @@ function App() {
                     <p className="u-margin-15 l-password">Forgot your password?</p>
                 </form>
             </div>
-            <div className="l-clip">
-                <img className="l-clip__img" src={wolfBack} alt=""/>
+            <div css={wolfFill}>
+                <img className="" src={wolfBack} alt=""/>
             </div>
 
         </div>
