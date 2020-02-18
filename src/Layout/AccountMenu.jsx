@@ -29,9 +29,10 @@ const textMenuDanger = css `
   const MenuAccount = () =>{
       return(
         <div css={DropAccount}>
-          <p css={textMenu}>My Account</p>
-          <p css={textMenu}>Settings</p>
-          <p css={[textMenu, textMenuDanger]}>Log Out</p>
+
+          <a href="./" css={textMenu}>My Account</a>
+          <a href="./" css={textMenu}>Settings</a>
+          <a href="./" css={[textMenu, textMenuDanger]}>Log Out</a>
         </div>
       );
   }

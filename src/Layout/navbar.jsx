@@ -6,9 +6,9 @@ import '../css/Utilidades.css';
 import logoNavBar from '../img/gpac_logo.svg'
 import Bell from '../img/icons/bell.svg'
 import MenuAccount from './AccountMenu';
+import MenuNoty from './NotificationsMenu';
 //import profilePic from '../img/icons/bell.svg'
 
-  
 
 class User extends Component{
   render(){
@@ -43,6 +43,28 @@ class NavBar extends Component{
                       max-width: 132px;
                       width: 100%;
                       height: auto;
+                  }
+                  &-notifications{
+                      position: relative;
+                      &:hover{
+                          .l-navbar-drop{
+                              transform: scale(1,1);
+                          }
+                      }
+                      > img{
+                        width: 28px;
+                        height: 28px;
+                        margin-right: 10px;
+                      }
+                      .l-navbar-drop{
+                        transform: scale(1,0);
+                        position: absolute;
+                        right: -7px;
+                        top: 65px;
+                        transform-origin: top center;
+                        transition: .3s all ease-in-out;
+                        background-color: #f2f2f2;
+                      }
                   }
                   &-menu{
                       display: flex;
@@ -109,10 +131,12 @@ class NavBar extends Component{
                 <div className="l-navbar-flex">
                       <img src={logoNavBar} className="l-navbar-logo" alt=""/>
                       <div className="l-navbar-menu">
-                          <img src={Bell} css={{
-                              width: '28px',
-                              height: '28px'
-                          }} alt=""/>
+                          <div className="l-navbar-notifications">
+                            <img src={Bell}  alt=""/>
+                            <div className="l-navbar-drop">
+                                <MenuNoty/>
+                            </div>
+                            </div>
                           <div className="l-menu-profile">
                               <User userName="Profile" />
                               <img src={`https://images.unsplash.com/photo-1529092419721-e78fb7bddfb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4968&q=80`} alt=""/>

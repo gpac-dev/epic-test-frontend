@@ -130,6 +130,7 @@
       }
       form{
           width: 100%;
+          max-width: unset !important;
       }
       input{
           width: 100%;
