@@ -24,15 +24,15 @@ class User extends Component{
     }
 }
 
-class UserPic extends Component{
-    render(){
-        return(
-            <div>
-                <img src={this.props.profilePic} alt=""/>
-            </div>
-        )
-    }
-}
+// class UserPic extends Component{
+//     render(){
+//         return(
+//             <div>
+//                 <img src={this.props.profilePic} alt=""/>
+//             </div>
+//         )
+//     }
+// }
 
 
   class NavBar extends Component{
@@ -72,6 +72,19 @@ class UserPic extends Component{
                                   margin: 0 10px;
                               }
                           }
+                          .l-menu-dots{
+                              display: flex;
+                              flex-direction: column;
+                              align-items: center;
+                              span{
+                                  width: 5px;
+                                  height: 5px;
+                                  background-color: #5b5b5b;
+                                  border-radius:50%;
+                                  margin: 2px 0 ;
+
+                              }
+                          }
                       }
   
                   }
@@ -91,6 +104,11 @@ class UserPic extends Component{
                               <div className="l-menu-profile">
                                   <User userName="Profile" />
                                   <img src={`https://images.unsplash.com/photo-1529092419721-e78fb7bddfb2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=4968&q=80`} alt=""/>
+                                  <div className="l-menu-dots">
+                                      <span></span>
+                                      <span></span>
+                                      <span></span>
+                                  </div>
                               </div>
                           </div>
                     </div>
