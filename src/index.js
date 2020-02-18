@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 import { css } from 'emotion'
 
 const app = document.getElementById('root')
-const myStyle = css`
-  background-color: rebeccapurple;
-`
-app.classList.add(myStyle)
+// const myStyle = css`
+//   background-color: rebeccapurple;
+// `
+// app.classList.add(myStyle)
 
 
 

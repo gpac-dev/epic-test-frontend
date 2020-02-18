@@ -33,16 +33,6 @@ const NotificationsPanel = css `
 `;
 
 
-const CardStatusNoty = css `
-  width: 100%;
-  height: 54px;
-  background-color: ${panelBack};
-  border-left: 6px;
-  display: flex; 
-  align-items: center;
-  padding: 0 20px;
-`;
-
 
 const CardPic = css`
     width: 35px;
@@ -50,7 +40,7 @@ const CardPic = css`
 
 `;
 
-const CardContent = css `
+const CardContent = css`
     background-color: ${panelBack};
     p{
     margin: 0;
@@ -59,21 +49,50 @@ const CardContent = css `
 `;
 
 
-const hotCard = css `
-    border-color: lightblue;
+const PanelDrop = css`
+display: flex;
+align-items: center;
+`;
+
+const PanelCandidate = css`
+    border-color: tomato;
+`;
+
+const PanelHotItem = css`
+    border-color: navy;
+`;
+
+const PanelDeal = css`
 `;
 
 
 class NotyCard extends Component{
     render(){
         return(
-            <div css={CardStatusNoty}>
+            <div css={NotificationsPanel}>
+                <div className={PanelDrop}>
                 <img css={CardPic} src={userIcon} alt=""/>
                 <div css={CardContent}>
                     <p>A new Hot Candidate was added to your DIG</p>
                     
                 </div>
+                </div>
+                <div >
+                <img css={CardPic} src={userIcon} alt=""/>
+                <div css={CardContent}>
+                    <p>A new Hot Candidate was added to your DIG</p>
+                    
+                </div>
+                </div>
+                <div >
+                <img css={CardPic} src={userIcon} alt=""/>
+                <div css={CardContent}>
+                    <p>A new Hot Candidate was added to your DIG</p>
+                    
+                </div>
+                </div>
             </div>
+            
         );
     }
 }
@@ -89,9 +108,7 @@ class NotyCard extends Component{
                 <p>Notifications <span>{this.props.notificationsNumber}</span></p>
                 <p>Mark all as read</p>
             </div>
-            <div css={NotificationsPanel}>
-                <NotyCard css={hotCard}/>
-            </div>
+                <NotyCard />
         </div>
           );
       }
