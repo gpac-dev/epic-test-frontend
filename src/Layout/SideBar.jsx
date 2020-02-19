@@ -18,6 +18,7 @@
       display: flex;
       justify-content:center;
       flex-direction: column;
+    //   background-image: url('${Dashboard}') ;
           img{
               width: 32px;
               height: 32px;
