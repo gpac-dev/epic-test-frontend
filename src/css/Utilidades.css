@@ -49,6 +49,7 @@ TIPOGRAFIA
 .u-Roboto24{font-size:calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto22{font-size:calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto18{font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto16{font-size:calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));}
 
 
 
