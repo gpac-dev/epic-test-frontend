@@ -10,15 +10,18 @@ const statsLayout = css `
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  background-color: #f2f2f2;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
     .l-performance{
-        width: calc(100% / 3);
+        width: calc(100% / 3 - 40px);
         margin: 20px;
         height: 196px;
         border-radius: 5px 5px 5px 50px;
         background-color: White;
         position: relative;
         padding:  20px;
+        min-width: 260px;
         &-head{
             p{}
 

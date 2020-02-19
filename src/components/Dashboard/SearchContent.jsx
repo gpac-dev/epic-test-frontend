@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
     box:{
         width: '100%',
-        margin: '30px 0',
+        margin: '70px 0',
         padding: '0 20px',
         '& div':{
             position: 'relative'
@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     maxWidth: 1200,
     margin: 0,
-    padding: 0,
+    padding: '0 20px',
     zIndex: 1,
     position: 'absolute',
     listStyle: 'none',

@@ -7,6 +7,7 @@
     width: calc(100% / 4);
     max-width: 253px;
     height: 54px;
+    min-width: 250px;
     background: #1A1C21 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 47px;
@@ -14,12 +15,6 @@
     align-items: center;
     padding: 0 10px;
     margin: 15px ;
-    &:nth-child(1){
-        margin: 15px 15px 15px 0;
-    }
-    &:nth-child(4){
-        margin: 15px 0px 15px 15px;
-    }
 
 
     .l-kick{
