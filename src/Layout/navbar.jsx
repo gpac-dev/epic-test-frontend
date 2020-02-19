@@ -1,8 +1,6 @@
 /** @jsx jsx */
 import { Component } from 'react';
 import { jsx, css, Global } from '@emotion/core';
-import '../css/Main.css';
-import '../css/Utilidades.css';
 import logoNavBar from '../img/gpac_logo.svg'
 import Bell from '../img/icons/bell.svg'
 import MenuAccount from './AccountMenu';
