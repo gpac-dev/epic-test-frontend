@@ -8,7 +8,7 @@
 const statsLayout = css `
   width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   background-color: #f2f2f2;
     .l-performance{
