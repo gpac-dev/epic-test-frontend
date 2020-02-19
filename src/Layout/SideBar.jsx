@@ -51,7 +51,6 @@ class ItemSide extends Component{
 class SideBar extends Component{
       render(){
           return(
-              <div>
                   <div className={this.props.className}>
                       <div css={SidePanel}>
                          <ItemSide className="l-side" iconSide={Overview} ItemSection={'Overview'}/>
@@ -61,7 +60,6 @@ class SideBar extends Component{
                          <ItemSide className="l-side" iconSide={Dashboard} ItemSection={'Dashboards'} />
                       </div>
                   </div>
-              </div>
           );
       }
   }
