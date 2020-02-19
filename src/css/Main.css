@@ -16,7 +16,6 @@ ESTILOS BASE TIPOGRAFÍA | VARIABLES |
 }
 
 
-
 * {box-sizing: border-box; font-family: 'Roboto', sans-serif; line-height: normal;}
 
 
@@ -39,3 +38,18 @@ a {
 
 input{-webkit-appearance: none;
   -moz-appearance: none;}
+
+
+.g-container{
+  width: 100%;
+  display: flex;
+}
+
+.g-container__side{
+  width: 110px;
+  min-height: 100vh;
+}
+
+.g-container__box{
+  width: calc(100% - 110px);
+}

@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import '../src/css/Main.css';
+import '../src/css/Utilidades.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { css } from 'emotion'
+//import { css } from 'emotion'
 
-const app = document.getElementById('root')
+//const app = document.getElementById('root')
 // const myStyle = css`
 //   background-color: rebeccapurple;
 // `

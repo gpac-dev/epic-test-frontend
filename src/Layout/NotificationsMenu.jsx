@@ -52,14 +52,20 @@ const CardContent = css`
 const PanelDrop = css`
 display: flex;
 align-items: center;
+margin: 5px 0;
 `;
 
 const PanelCandidate = css`
+    display: flex;
+    align-items:center;
     border-color: tomato;
+    margin: 5px 0;
 `;
 
 const PanelHotItem = css`
-    border-color: navy;
+    display:flex;
+    align-items: center;
+    margin: 5px 0;
 `;
 
 const PanelDeal = css`
@@ -70,21 +76,21 @@ class NotyCard extends Component{
     render(){
         return(
             <div css={NotificationsPanel}>
-                <div className={PanelDrop}>
+                <div css={PanelDrop}>
                 <img css={CardPic} src={userIcon} alt=""/>
                 <div css={CardContent}>
                     <p>A new Hot Candidate was added to your DIG</p>
                     
                 </div>
                 </div>
-                <div >
+                <div css={PanelCandidate}>
                 <img css={CardPic} src={userIcon} alt=""/>
                 <div css={CardContent}>
                     <p>A new Hot Candidate was added to your DIG</p>
                     
                 </div>
                 </div>
-                <div >
+                <div css={PanelHotItem}>
                 <img css={CardPic} src={userIcon} alt=""/>
                 <div css={CardContent}>
                     <p>A new Hot Candidate was added to your DIG</p>
