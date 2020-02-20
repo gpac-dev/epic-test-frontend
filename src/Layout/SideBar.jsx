@@ -18,6 +18,7 @@
       display: flex;
       justify-content:center;
       flex-direction: column;
+      transition: .4s ease-in-out;
       &:hover{
           background-color: #f2f2f2;
           box-shadow: 1px 2px 4px #e0e0e0;

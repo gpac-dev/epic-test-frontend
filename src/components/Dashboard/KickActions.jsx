@@ -13,8 +13,9 @@
   const ButtonKick = css`
     width: 100%;
     display: flex;
-    justy-content: space-around;
+    justify-content: space-around;
     padding: 0 20px;
+    flex-wrap: wrap;
 
 
     .l-kick{

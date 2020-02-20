@@ -78,6 +78,7 @@
                   -webkit-appearance: none;
                   box-shadow: 0px 3px 12px #0000000F;;
                 -moz-appearance: none;
+                font-size: 18px;
               }
               
               button{
@@ -106,20 +107,20 @@
       }
   
   
-  @media (max-width: 1075px){
+  @media (max-width: 1080px){
       .l-work{
           display: none;
       }
   }
   
-  @media (min-width: 1075px){
+  @media (min-width: 1080px){
       .l-display{
           display: none;
       }
   }
   
   
-  @media (max-width: 1075px){
+  @media (max-width: 1080px){
       .l-display{
           display: block;
       }
