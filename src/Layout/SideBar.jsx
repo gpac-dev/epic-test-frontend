@@ -1,11 +1,11 @@
   /** @jsx jsx */
   import { Component } from 'react';
   import { jsx, css } from '@emotion/core';
-  import Overview from '../img/icons/home.svg';
-  import Map from '../img/icons/map.svg';
-  import Sendout from '../img/icons/sendout.svg';
-  import Inventory from '../img/icons/inventory.svg';
-  import Dashboard from '../img/icons/dashboard.svg';
+  import Overview from '../img/icons/home-grey.svg';
+  import Map from '../img/icons/map-grey.svg';
+  import Sendout from '../img/icons/sendout-grey.svg';
+  import Inventory from '../img/icons/inventory-grey.svg';
+  import Dashboard from '../img/icons/dashboard-grey.svg';
 
   const paragraph = '#56595B;'
 
@@ -18,7 +18,10 @@
       display: flex;
       justify-content:center;
       flex-direction: column;
-    //   background-image: url('${Dashboard}') ;
+      &:hover{
+          background-color: #f2f2f2;
+          box-shadow: 1px 2px 4px #e0e0e0;
+      }
           img{
               width: 32px;
               height: 32px;
@@ -46,7 +49,7 @@ class ItemSide extends Component{
 }
 
 const variables = {
-     ItemSection:'Overviewsss'
+     ItemSection:'Overview'
 };
 
 

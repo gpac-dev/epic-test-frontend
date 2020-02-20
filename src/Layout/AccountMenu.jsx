@@ -6,16 +6,17 @@
 const DropAccount = css `
 width: 200px;
 height: 136px;
-background: #f2f2f2 0% 0% no-repeat padding-box;
+background: White 0% 0% no-repeat padding-box;
 border-radius: 5px 5px 30px 5px;
 padding: 10px 20px  ;
 display: flex;
 flex-direction: column;
 justify-content: space-around;
+box-shadow: 2px 4px 10px 0px #00000047;
 `;
 
 const textMenu = css `
-    font-weight: 700;
+    font-weight: 400;
     font-size: 16px;
     margin: 5px 0;
 `;

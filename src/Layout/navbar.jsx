@@ -65,9 +65,19 @@ class NavBar extends Component{
                         transition: .3s all ease-in-out;
                         background-color: White;
                         border-radius: 5px 5px 30px 5px;
-                     
-                        box-shadow: 2px 4px 10px 0px #00000047
+                        box-shadow: 2px 4px 10px 0px #00000047;
+                        &:after{
+                          content: '';
+                          position: absolute;
+                          clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                          background-color: #ffffff;
+                          width: 20px;
+                          height: 23px;
+                          right: 18px;
+                          top: -13px;
+                          box-shadow: 2px 4px 10px 0px #00000047;
 
+                        }
                       }
                   }
                   &-menu{
@@ -87,7 +97,7 @@ class NavBar extends Component{
                           content: '';
                           position: absolute;
                           clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-                          background-color: #f2f2f2;
+                          background-color: #ffffff;
                           width: 20px;
                           height: 23px;
                           right: 10px;
