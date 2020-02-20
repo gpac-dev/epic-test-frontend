@@ -55,9 +55,9 @@ const NotificationsPanel = css `
             img{
                 opacity: .3;
             }
-            &-content{
+            .l-status-content{
                 p{
-                    color: #9CA6B5;
+                    color: #9CA6B5 !important;
                 }
             }
         }
@@ -69,6 +69,7 @@ const NotificationsPanel = css `
             p{
                 margin: 0;
                 padding: 0 20px;
+                color: #1A1C21;
             }
         }
     }
@@ -85,8 +86,7 @@ class NotyStatus extends Component{
             <div className={this.props.className}>
                 <img className="" src={this.props.IconStatus} alt=""/>
                 <div className="l-status-content">
-                    <p>A new Hot Candidate was added to your DIG</p>
-                    
+                    <p>{this.props.textStatus}</p>
                 </div>
             </div>
         );
@@ -100,9 +100,26 @@ class NotyCard extends Component{
     render(){
         return(
             <div css={NotificationsPanel}>
-               <NotyStatus className="l-status l-status--candidate" IconStatus={Candidate}/>
-               <NotyStatus className="l-status l-status--hotItem" IconStatus={HotItem}/>
-               <NotyStatus className="l-status l-status--placements" IconStatus={Placement}/>
+               <NotyStatus 
+               className="l-status l-status--candidate" 
+               IconStatus={Candidate}
+               textStatus={"A new Hot Candidate was added to your DIG"}
+               />
+               <NotyStatus 
+               className="l-status l-status--hotItem" 
+               IconStatus={HotItem}
+               textStatus={'A Hot Job Order have more than 2 days without sendouts!'}
+               />
+               <NotyStatus 
+               className="l-status l-status--placements" 
+               IconStatus={Placement}
+               textStatus={'New Deal: KJC $14,560!'}
+               />
+               <NotyStatus 
+               className="l-status l-status--placements l-status--disable" 
+               IconStatus={Placement}
+               textStatus={'A new Hot Candidate was Added to your DIG'}
+               />
 
             </div>
             
