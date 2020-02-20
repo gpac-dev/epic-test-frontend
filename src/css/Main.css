@@ -2,7 +2,7 @@
 ESTILOS BASE TIPOGRAFÍA | VARIABLES |
 --------------------------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
 :root {
     --maxlayout: 1920px;
   --layout: 1366px;

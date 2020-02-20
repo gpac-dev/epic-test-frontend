@@ -42,6 +42,7 @@ TIPOGRAFIA
 .u-Roboto61 { font-size:calc(23px + (61 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
 .u-Roboto54 { font-size:calc(23px + (54 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
 .u-Roboto50 { font-size:calc(23px + (50 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto45 { font-size:calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
 .u-Roboto38{font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto35{font-size:calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto30{font-size:calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));}
@@ -63,6 +64,7 @@ TIPOGRAFIA
 
 .u-Black{font-family: 'Roboto' !important;}
 .u-Light{font-family: 'Roboto' !important;}
+.u-Montse{font-family: 'Montserrat', sans-serif !important;}
 
 .u-upper{text-transform: uppercase;}
 .u-lower{text-transform: lowercase;}
