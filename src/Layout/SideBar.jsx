@@ -45,15 +45,19 @@ class ItemSide extends Component{
     }
 }
 
-
+const variables = {
+     ItemSection:'Overviewsss'
+};
 
 
 class SideBar extends Component{
+    
       render(){
           return(
+              
                   <div className={this.props.className}>
                       <div css={SidePanel}>
-                         <ItemSide className="l-side" iconSide={Overview} ItemSection={'Overview'}/>
+                         <ItemSide className="l-side" {...variables} iconSide={Overview} />
                          <ItemSide className="l-side" iconSide={Map} ItemSection={'Map'} />
                          <ItemSide className="l-side" iconSide={Inventory} ItemSection={'Inventory'} />
                          <ItemSide className="l-side" iconSide={Sendout} ItemSection={'Sendouts'} />
