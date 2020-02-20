@@ -39,6 +39,7 @@
                 width: 20px;
                 height: 20px;
                 transition: .5s ease-in-out;
+                transition-delay: 1s;
                 
             }
             &:hover{
@@ -52,7 +53,7 @@
                 background-image: url('${CompanyGrey}');
                 width: 20px;
                 height: 20px;
-                transition: .5s ease-in-out;
+                transition: 1s ease-in-out;
                 
             }
             &:hover{
@@ -66,7 +67,7 @@
                 background-image: url('${JobGrey}');
                 width: 20px;
                 height: 20px;
-                transition: .5s ease-in-out;
+                transition: 1s ease-in-out;
                 
             }
             &:hover{
@@ -80,7 +81,7 @@
                 background-image: url('${SendoutGrey}');
                 width: 20px;
                 height: 20px;
-                transition: .5s ease-in-out;
+                transition: 1s ease-in-out;
                 
             }
             &:hover{

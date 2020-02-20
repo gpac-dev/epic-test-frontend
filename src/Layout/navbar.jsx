@@ -32,6 +32,8 @@ class NavBar extends Component{
               background-color: White;
               padding: 0 25px;
               display: flex;
+              position: relative;
+              z-index: 2;
                   &-flex{
                       display: flex;
                       width: 100%;
@@ -45,7 +47,7 @@ class NavBar extends Component{
                   &-notifications{
                       position: relative;
                       &:hover{
-                          .l-navbar-drop{
+                          .l-navbar-notifications--drop{
                               transform: scale(1,1);
                           }
                       }
@@ -54,14 +56,18 @@ class NavBar extends Component{
                         height: 28px;
                         margin-right: 10px;
                       }
-                      .l-navbar-drop{
+                      &--drop{
                         transform: scale(1,0);
                         position: absolute;
                         right: -7px;
                         top: 65px;
                         transform-origin: top center;
                         transition: .3s all ease-in-out;
-                        background-color: #f2f2f2;
+                        background-color: White;
+                        border-radius: 5px 5px 30px 5px;
+                     
+                        box-shadow: 2px 4px 10px 0px #00000047
+
                       }
                   }
                   &-menu{
@@ -131,8 +137,8 @@ class NavBar extends Component{
                       <div className="l-navbar-menu">
                           <div className="l-navbar-notifications">
                             <img src={Bell}  alt=""/>
-                            <div className="l-navbar-drop">
-                                <MenuNoty/>
+                            <div className="l-navbar-notifications--drop">
+                                <MenuNoty notificationsNumber={'(930)'}/>
                             </div>
                             </div>
                           <div className="l-menu-profile">
