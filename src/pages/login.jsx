@@ -6,14 +6,40 @@
   import dots from '../img/dots.svg';
   import doted from '../img/dots.svg';
   import gpac from '../img/GPAC-logo-GB.png';
+  import {
+    withStyles
+  } from "@material-ui/core/styles";
+import TextField from '@material-ui/core/TextField';
   
-  const dark = 'tomato';
-  
+const CssTextField = withStyles({
+    root: {
+      "& label.Mui-focused": {
+        color: "green"
+      },
+      "& .MuiInput-underline:after": {
+        borderBottomColor: "green"
+      },
+      "& .MuiOutlinedInput-root": {
+        "& fieldset": {
+          borderColor: "navy",
+          borderRadius: "30px"
+        },
+        "&:hover fieldset": {
+          borderColor: "yellow"
+        },
+        "&.Mui-focused fieldset": {
+          borderColor: "green"
+        }
+      }
+    }
+  })(TextField);
+
+
   const containerBox = css`
     height: 100vh;
     width: 100%;
-    background-color: ${dark};
   `;
+
   
   
   const logginBox = css`
@@ -155,6 +181,18 @@
       
   
   `;
+
+
+function BasicTextFields() {
+    const classes = withStyles();
+  
+    return (
+      <form className={classes.root} noValidate autoComplete="off">
+        <TextField id="outlined-basic" label="E-mail" variant="outlined" />
+        <TextField id="outlined-basic" label="Password" variant="outlined" />
+      </form>
+    );
+  }
   
   
 
@@ -172,8 +210,8 @@
               </div>
               <div className="l-login-box">
                   <img className="l-login-brand" src={gpac} alt=""/>
-                 
-                  <form action="">
+                  <BasicTextFields/>
+                  <form action="" className="u-hide">
                       <p className=" u-Roboto45 u-margin-30 u-text-700 l-display u-Montse">Do more than just work for a living</p>
                       
   
@@ -186,8 +224,6 @@
                       <p className="u-margin-15 l-password">Forgot your password?</p>
                   </form>
               </div>
-              
-  
           </div>
       </div>
     );
