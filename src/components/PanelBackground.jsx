@@ -9,6 +9,8 @@ const BackContainer = css`
   height: 100%;
   background-size: cover;
   background-image: url('${Background}');
+  overflow: auto;
+  display: flex;
 `;
  
 

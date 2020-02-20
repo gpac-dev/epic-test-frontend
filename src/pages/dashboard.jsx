@@ -22,7 +22,6 @@ class Dashboard extends Component {
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
-                        height: 100%;
                     }
                 `}
                 />
@@ -31,9 +30,7 @@ class Dashboard extends Component {
                 <SideBar className="g-container__side"/>
                 <PannelBackground className="g-container__box">
                     <div className="g-dashboard-container">
-
                     <CardStats/>
-                    
                     <Actions/>
                     </div>
                 </PannelBackground>
