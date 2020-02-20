@@ -68,8 +68,8 @@ const PanelHotItem = css`
     margin: 5px 0;
 `;
 
-const PanelDeal = css`
-`;
+// const PanelDeal = css`
+// `;
 
 
 class NotyCard extends Component{

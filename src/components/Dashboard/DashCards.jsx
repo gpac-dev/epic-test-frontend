@@ -2,7 +2,9 @@
   import React from 'react';
   import { Component } from 'react';
   import { jsx, css } from '@emotion/core';
- import Sendout from '../../img/icons/sendout.svg'
+ import Sendout from '../../img/icons/sendout-grey.svg';
+ import HotItem from '../../img/icons/hot-grey.svg';
+ import Placements from '../../img/icons/placement-grey.svg'
 
 
 const statsLayout = css `
@@ -34,6 +36,7 @@ const statsLayout = css `
             position: absolute;
             bottom: 10px;
             left: 10px;
+            opacity: .3;
         }
         &--sendout{
             border-right: 14px solid #50C9F5;
@@ -76,13 +79,13 @@ class CardStats extends Component{
                     <StatsItemCard 
                     className="l-performance l-performance--hotitem" 
                     PerformanceHead="HOT ITEMS" 
-                     IconPerformance={Sendout}
+                     IconPerformance={HotItem}
                      PerformanceStatus="Total Inventory"
                      />
                     <StatsItemCard 
                     className="l-performance l-performance--placements" 
                     PerformanceHead="PLACEMENTS" 
-                     IconPerformance={Sendout}
+                     IconPerformance={Placements}
                      PerformanceStatus="Total Inventory"
                      />
                 </div>

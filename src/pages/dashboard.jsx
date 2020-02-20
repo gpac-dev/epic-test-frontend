@@ -6,7 +6,7 @@ import CardStats from '../components/Dashboard/DashCards';
 import SideBar from '../Layout/SideBar';
 import PannelBackground from '../components/PanelBackground';
 import Actions from '../components/Dashboard/KickActions'
-//import UseAutocomplete from '../components/Dashboard/SearchContent';
+import UseAutocomplete from '../components/Dashboard/SearchContent';
 
 
 class Dashboard extends Component {
@@ -31,6 +31,7 @@ class Dashboard extends Component {
                 <PannelBackground className="g-container__box">
                     <div className="g-dashboard-container">
                     <CardStats/>
+                    <UseAutocomplete/>
                     <Actions/>
                     </div>
                 </PannelBackground>
