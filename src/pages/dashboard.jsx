@@ -23,6 +23,9 @@ class Dashboard extends Component {
                         align-items: center;
                         justify-content: center;
                     }
+                    .l-global{
+                        width: 100%;
+                    }
                 `}
                 />
                 <Layout/>
@@ -31,7 +34,7 @@ class Dashboard extends Component {
                 <PannelBackground className="c-flex">
                 <div className="g-info-container">
                     <CardStats/>
-                    <UseAutocomplete  PlaceFill="Search by keyword..."  />
+                    <UseAutocomplete className="l-global" PlaceFill="Search by keyword..."  />
                     <Actions/>
                     </div>
                 </PannelBackground>

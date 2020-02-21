@@ -66,7 +66,9 @@ export default function UseAutocomplete(props) {
   });
 
   return (
-    <div className={classes.box, props.className} >
+    
+    <div className={props.className} >
+  
       <div {...getRootProps()}>
         <input className={classes.input} {...getInputProps()} placeholder={props.PlaceFill} />
       </div>
