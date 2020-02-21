@@ -54,15 +54,18 @@ import InputFill from '../components/Utilities/TextField';
               height: 100%;
               position: absolute;
               right: 0;
-              z-index: 2;  
+              z-index: 2; 
+                &-content{
+                    position: absolute;
+                    width: 100%;
+                    padding: 0 20px;
+                    max-width: 371px;
+                    top: calc(100% - 60%);
+                }
               form{
                   display: flex;
                   flex-direction: column;
-                  top: calc(100% - 60%);
-                  position: absolute;
-                  width: 100%;
-                  padding: 0 20px;
-                  max-width: 371px;
+                 
               }
               
               form > p{
@@ -125,15 +128,24 @@ import InputFill from '../components/Utilities/TextField';
   @media (max-width: 1080px){
       .l-display{
           display: block;
+          text-align: center;
       }
       .l-login-box{
           max-width: 80%;
           left: 0;
           margin: auto;
+          &-content{
+            left: 0;
+          right: 0;
+          margin auto;
+          max-width: 100%;
+          }
       }
       form{
           width: 100%;
-          max-width: unset !important;
+          max-width: 376px;
+          margin: auto;
+          
       }
       input{
           width: 100%;
@@ -174,9 +186,9 @@ import InputFill from '../components/Utilities/TextField';
               </div>
               <div className="l-login-box">
                   <img className="l-login-brand" src={gpac} alt=""/>
-
-                  <form action="" className="">
+                    <div className="l-login-box-content">
                       <p className=" u-Roboto45 u-margin-30 u-text-700 l-display u-Montse">Do more than just work for a living</p>
+                    <form action="" className="">
                       
                         <InputFill LabelTag="E-mail"/>
                         <InputFill LabelTag="Password"/>
@@ -186,6 +198,8 @@ import InputFill from '../components/Utilities/TextField';
                        <p className="u-margin-15 l-password">Forgot your password?</p>
                                              
                   </form>
+                    </div>
+                  
               </div>
           </div>
       </div>
