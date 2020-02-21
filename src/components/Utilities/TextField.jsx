@@ -5,6 +5,7 @@ import {withStyles} from "@material-ui/core/styles";
 const CssTextField = withStyles({
     root: {
       margin: "10px 0",
+      width: "100%",
       "& label.Mui-focused": {
         color: "#1A1C21",
         backgroundColor: "#eceef2",
@@ -30,46 +31,22 @@ const CssTextField = withStyles({
   })(TextField);
 
 
-// export default CssTextField;
-
-//   function InputFill(){
-//     const classes = withStyles();
-//         return(
-//             <div className={classes.root}>
-//                 <CssTextField
-//         className={classes.margin}
-//         label="E-mail"
-//         variant="outlined"
-//         id="custom-css-outlined-input"
-//       />
-//             </div>
-//         );
-//   }
-
-
-  //export default InputFill;
-
-  function BasicTextFields() {
-    const classes = withStyles();
-  
-    return (
-      <form className={classes.root} noValidate autoComplete="on">
-      <CssTextField
-        className={classes.margin}
-        label="E-mail"
-        variant="outlined"
-        id="custom-css-outlined-input"
-      />
-      <CssTextField
-        className={classes.margin}
-        label="Password"
-        variant="outlined"
-        id="custom-css-outlined-input"
-      />
-      <button className="u-margin-15">
-                          Log in
-                      </button> 
-      </form>
-    );
+  class InputFill extends React.Component{
+    render(){
+      const classes = withStyles();
+      return(
+          <div className={classes.root}>
+              <CssTextField
+                  className={classes.margin}
+                  label={this.props.LabelTag}
+                   variant="outlined"
+                  id="custom-css-outlined-input"
+               />
+          </div>
+      );
+    }
+ 
   }
-  export default BasicTextFields;
+
+
+  export default InputFill;

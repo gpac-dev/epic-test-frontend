@@ -6,36 +6,9 @@
   import dots from '../img/dots.svg';
   import doted from '../img/dots.svg';
   import gpac from '../img/GPAC-logo-GB.png';
-//import CssTextField from '../components/Utilities/TextField'
-import BasicTextFields from '../components/Utilities/TextField';
-//import { FormControl } from '@material-ui/core';
-  
-// const CssTextField = withStyles({
-//     root: {
-//       margin: "10px 0",
-//       "& label.Mui-focused": {
-//         color: "#1A1C21",
-//         backgroundColor: "#eceef2",
-//         padding: "0 15px 0 3px",
-//       },
-//       "& .MuiInput-underline:after": {
-//         borderBottomColor: "#1A1C21"
-//       },
-//       "& .MuiOutlinedInput-root": {
-//         "& fieldset": {
-//           borderRadius: "30px"
-//         },
-//         "&:hover fieldset": {
-//           borderColor: "#1A1C21",
-//           borderWidth: "1px"
-//         },
-//         "&.Mui-focused fieldset": {
-//           borderColor: "#1A1C21",
-//           borderWidth: "1px"
-//         }
-//       }
-//     }
-//   })(TextField);
+import InputFill from '../components/Utilities/TextField';
+//import BasicTextFields from '../components/Utilities/TextField';
+
 
 
   const containerBox = css`
@@ -185,28 +158,6 @@ import BasicTextFields from '../components/Utilities/TextField';
   
   `;
 
-
-// function BasicTextFields() {
-//     const classes = withStyles();
-  
-//     return (
-//       <form className={classes.root} noValidate autoComplete="on">
-//       <CssTextField
-//         className={classes.margin}
-//         label="E-mail"
-//         variant="outlined"
-//         id="custom-css-outlined-input"
-//       />
-//       <CssTextField
-//         className={classes.margin}
-//         label="Password"
-//         variant="outlined"
-//         id="custom-css-outlined-input"
-//       />
-//       </form>
-//     );
-//   }
-  
   
 
   
@@ -223,20 +174,18 @@ import BasicTextFields from '../components/Utilities/TextField';
               </div>
               <div className="l-login-box">
                   <img className="l-login-brand" src={gpac} alt=""/>
-                  <BasicTextFields/>
-                  {/* <button className="u-margin-15">
-                          Log in
-                      </button>   */}
-                  {/* <form action="" className="u-hide">
+
+                  <form action="" className="">
                       <p className=" u-Roboto45 u-margin-30 u-text-700 l-display u-Montse">Do more than just work for a living</p>
                       
-  
-                      <input className="u-margin-15 " type="text" placeholder="E-mail"/>
-  
-                      <input className="u-margin-15" type="text" placeholder="Password"/>
-                                           
-                      <p className="u-margin-15 l-password">Forgot your password?</p>
-                  </form> */}
+                        <InputFill LabelTag="E-mail"/>
+                        <InputFill LabelTag="Password"/>
+                        <button className="u-margin-15">
+                             Log in
+                         </button> 
+                       <p className="u-margin-15 l-password">Forgot your password?</p>
+                                             
+                  </form>
               </div>
           </div>
       </div>
