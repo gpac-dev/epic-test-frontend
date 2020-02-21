@@ -26,11 +26,8 @@ export default function ComboBox(props) {
 
   return (
     <div css={selectStyle}>
-      <label htmlFor="select">Hola</label>
-      <select name="" id="" className="l-select">
-        
-      </select>
-      <input type="text" placeholder={props.Po}/>
+      <label htmlFor="input"></label>
+      <input type="text" className="l-select" placeholder={props.PlaceTag}/>
     </div>
     
   );

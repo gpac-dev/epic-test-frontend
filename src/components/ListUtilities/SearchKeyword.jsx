@@ -26,7 +26,7 @@ class SearchKeyWord extends Component{
         return(
             <div css={InputBackground}>
                 <div className="l-searchAutocomplete">
-                   <ComboBox InfoAuto="Search by Keyword"/>
+                   <ComboBox InfoAuto="Search by Keyword" PlaceTag={"Hola"}/>
                 </div>
             </div>
         );
