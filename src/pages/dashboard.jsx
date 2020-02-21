@@ -8,6 +8,19 @@ import PannelBackground from '../components/PanelBackground';
 import Actions from '../components/Dashboard/KickActions'
 import UseAutocomplete from '../components/Dashboard/SearchContent';
 
+const DashLayout = css `
+max-width: 1200px;
+margin: auto;
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+.l-search{
+    width: 100%;
+}
+`;
+
 
 class Dashboard extends Component {
     render(){
@@ -15,26 +28,18 @@ class Dashboard extends Component {
             <Fragment>
                 <Global styles ={css`
                     .g-info-container{
-                        max-width: 1200px;
-                        margin: auto;
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
+                        
                     }
-                    .l-global{
-                        width: 100%;
-                    }
+                    
                 `}
                 />
                 <Layout/>
                 <div className="g-container">
                 <SideBar className="g-container__side"/>
                 <PannelBackground className="c-flex">
-                <div className="g-info-container">
+                <div css={DashLayout}>
                     <CardStats/>
-                    <UseAutocomplete className="l-global" PlaceFill="Search by keyword..."  />
+                    <UseAutocomplete className="l-search" PlaceFill="Search by keyword..."  />
                     <Actions/>
                     </div>
                 </PannelBackground>
