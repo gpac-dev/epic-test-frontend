@@ -1,7 +1,7 @@
   /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { Component } from 'react';
-import ComboBox from '../Utilities/ComboBox';
+import UseAutocomplete from '../Dashboard/SearchContent';
 
 const InputBackground = css `
   background-color: White;
@@ -15,6 +15,10 @@ const InputBackground = css `
             max-width: 300px;
             width: 100%;
             position: relative;
+            &-input{
+                height: 54px;
+            }
+
         }
     }
 `;
@@ -26,7 +30,7 @@ class SearchKeyWord extends Component{
         return(
             <div css={InputBackground}>
                 <div className="l-searchAutocomplete">
-                   <ComboBox InfoAuto="Search by Keyword" PlaceTag={"Hola"}/>
+                   <UseAutocomplete className="l-searchAutocomplete-input" PlaceFill="Search by Keyword"/>
                 </div>
             </div>
         );
