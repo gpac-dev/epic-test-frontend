@@ -14,7 +14,7 @@ class Dashboard extends Component {
         return(
             <Fragment>
                 <Global styles ={css`
-                    .g-dashboard-container{
+                    .g-info-container{
                         max-width: 1200px;
                         margin: auto;
                         width: 100%;
@@ -29,7 +29,7 @@ class Dashboard extends Component {
                 <div className="g-container">
                 <SideBar className="g-container__side"/>
                 <PannelBackground className="g-container__box">
-                    <div className="g-dashboard-container">
+                    <div className="g-info-container">
                     <CardStats/>
                     <UseAutocomplete/>
                     <Actions/>

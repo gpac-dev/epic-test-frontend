@@ -1,17 +1,17 @@
-  /** @jsx jsx */
+/** @jsx jsx */
 
-  import { jsx, css } from '@emotion/core';
-  import '../css/Main.css';
-  import '../css/Utilidades.css';
-  import dots from '../img/dots.svg';
-  import doted from '../img/dots.svg';
-  import gpac from '../img/GPAC-logo-GB.png';
+import { jsx, css } from '@emotion/core';
+import '../css/Main.css';
+import '../css/Utilidades.css';
+import dots from '../img/dots.svg';
+import doted from '../img/dots.svg';
+import gpac from '../img/GPAC-logo-GB.png';
 import InputFill from '../components/Utilities/TextField';
 import SuccessButton from '../components/Utilities/ButtonSuccess';
 
 
 
-  const containerBox = css`
+const containerBox = css`
     height: 100vh;
     width: 100%;
     .l-login{
@@ -103,7 +103,7 @@ const DisplaySection = css`
         }
     }
 `;
-  
+
 const MediaControl = css`
 @media (min-width: 1080px){
     .l-loginBox-head{
@@ -146,39 +146,36 @@ const MediaControl = css`
         }
     }
 }
-`; 
-  
+`;
 
-  
-  
-  
-  function Login() {
+
+
+
+
+function Login() {
     return (
-      <div css={containerBox}>
-          <div className="l-login" css={MediaControl}>
-              <div css={DisplaySection}>
-                  <img className="l-display-dots1" src={dots} alt=""/>
-                  <p className=" u-Roboto45 u-margin-30 u-text-700 l-display-head u-Montse">Do more than just work for a living</p>
-                  <img className="l-display-dots2" src={doted} alt=""/>
-              </div>
-              <div className="l-loginBox">
-                  <img className="l-loginBox-brand" src={gpac} alt=""/>
+        <div css={containerBox}>
+            <div className="l-login" css={MediaControl}>
+                <div css={DisplaySection}>
+                    <img className="l-display-dots1" src={dots} alt="" />
+                    <p className=" u-Roboto45 u-margin-30 u-text-700 l-display-head u-Montse">Do more than just work for a living</p>
+                    <img className="l-display-dots2" src={doted} alt="" />
+                </div>
+                <div className="l-loginBox">
+                    <img className="l-loginBox-brand" src={gpac} alt="" />
                     <div className="l-loginBox-content">
-                      <p className=" u-Roboto45 u-margin-30 u-text-700 l-loginBox-head u-Montse">Do more than just work for a living</p>
-                    <form action="" className="">
-                        <InputFill LabelTag="E-mail"/>
-                        <InputFill LabelTag="Password"/>
-                        <SuccessButton TextAction={"Log in"} className="l-loginBox--action"/>
-                       <p className="u-margin-15 l-loginBox-password">Forgot your password?</p>
-                                            
-                  </form>
+                        <p className=" u-Roboto45 u-margin-30 u-text-700 l-loginBox-head u-Montse">Do more than just work for a living</p>
+                        <form action="" className="">
+                            <InputFill LabelTag="E-mail" />
+                            <InputFill LabelTag="Password" />
+                            <SuccessButton TextAction={"Log in"} className="l-loginBox--action" />
+                            <p className="u-margin-15 l-loginBox-password">Forgot your password?</p>
+                        </form>
                     </div>
-                  
-              </div>
-          </div>
-      </div>
+                </div>
+            </div>
+        </div>
     );
-  }
-  
-  export default Login;
-  
+}
+
+export default Login;
