@@ -4,6 +4,7 @@ import { jsx, css } from '@emotion/core';
 const selectStyle = css`
 position: relative;
 background-color: White;
+border-radius: 30px;
   label{
     position: absolute;
     color: #9CA6B5;
@@ -14,7 +15,9 @@ background-color: White;
     border: none;
     height: 54px;
     border-radius: 30px;
-    color: 
+    color: #9CA6B5;
+    font-size: 18px;
+    padding-left: 30px;
   }
   .l-select::-webkit-{
     visibility: hiden;
