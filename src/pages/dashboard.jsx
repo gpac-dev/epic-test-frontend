@@ -1,5 +1,5 @@
   /** @jsx jsx */
-  import { jsx, css, Global } from '@emotion/core';
+  import { jsx, css } from '@emotion/core';
 import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
 import CardStats from '../components/Dashboard/DashCards';
@@ -26,13 +26,6 @@ class Dashboard extends Component {
     render(){
         return(
             <Fragment>
-                <Global styles ={css`
-                    .g-info-container{
-                        
-                    }
-                    
-                `}
-                />
                 <Layout/>
                 <div className="g-container">
                 <SideBar className="g-container__side"/>
