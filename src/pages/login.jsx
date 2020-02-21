@@ -7,7 +7,7 @@
   import doted from '../img/dots.svg';
   import gpac from '../img/GPAC-logo-GB.png';
 import InputFill from '../components/Utilities/TextField';
-//import BasicTextFields from '../components/Utilities/TextField';
+import SuccessButton from '../components/Utilities/ButtonSuccess';
 
 
 
@@ -87,18 +87,7 @@ import InputFill from '../components/Utilities/TextField';
               }
               
               button{
-                  border-radius: 3px;
-                  background-color: #4056F4;
-                  color: White;
-                  width: 100%;
-                  height: 50px;
-                  margin-top: 10px;
-                  border: none;
-                  align-self: flex-end;
-                  font-size: 18px;
-                  font-weight: 700;
-                  border-radius: 30px;
-                  max-width: 376px;
+                  
               }
               
               form > .l-password {
@@ -192,9 +181,7 @@ import InputFill from '../components/Utilities/TextField';
                       
                         <InputFill LabelTag="E-mail"/>
                         <InputFill LabelTag="Password"/>
-                        <button className="u-margin-15">
-                             Log in
-                         </button> 
+                        <SuccessButton TextAction={"Log in"}/>
                        <p className="u-margin-15 l-password">Forgot your password?</p>
                                              
                   </form>
