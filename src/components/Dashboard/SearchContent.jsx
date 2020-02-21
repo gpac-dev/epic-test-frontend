@@ -24,7 +24,10 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     height: 60,
     borderRadius: 30,
-    border: 'none'
+    border: 'none',
+    fontSize: '18px',
+    paddingLeft: '25px',
+    color: '#9CA6B5'
   },
   listbox: {
     width: '100%',
@@ -50,7 +53,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function UseAutocomplete() {
+export default function UseAutocomplete(props) {
   const classes = useStyles();
   const {
     getRootProps,
@@ -68,10 +71,9 @@ export default function UseAutocomplete() {
   return (
     <div className={classes.box}>
       <div {...getRootProps()}>
-        <label className={classes.label} {...getInputLabelProps()}>
-          Search by keyword...
-        </label>
-        <input className={classes.input} {...getInputProps()} />
+        {/* <label className={classes.label} {...getInputLabelProps()}>
+        </label> */}
+        <input className={classes.input} {...getInputProps()} placeholder={props.PlaceFill} />
       </div>
       {groupedOptions.length > 0 ? (
         <ul className={classes.listbox} {...getListboxProps()}>
@@ -84,17 +86,7 @@ export default function UseAutocomplete() {
   );
 }
 
-// class SearchContainer extends Component{
-//     render(){
-//         return(
-//             <div>
-//                 <UseAutocomplete/>
-//             </div>
-//         );
-//     }
-// }
 
-// export default SearchContainer;
 
 // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
 const top100Films = [

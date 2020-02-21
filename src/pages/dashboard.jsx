@@ -31,7 +31,7 @@ class Dashboard extends Component {
                 <PannelBackground className="c-flex">
                 <div className="g-info-container">
                     <CardStats/>
-                    <UseAutocomplete/>
+                    <UseAutocomplete PlaceFill="Search by keyword..."/>
                     <Actions/>
                     </div>
                 </PannelBackground>

@@ -18,6 +18,9 @@ border-radius: 30px;
     color: #9CA6B5;
     font-size: 18px;
     padding-left: 30px;
+    &:focus{
+      border-color: White;
+    }
   }
   .l-select::-webkit-{
     visibility: hiden;
