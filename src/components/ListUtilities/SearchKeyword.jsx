@@ -9,10 +9,12 @@ const InputBackground = css `
   max-width: 1200px;
   width: 100%;
   margin: 0 20px;
+  height: 54px;
     .l-search{
         &Autocomplete{
             max-width: 300px;
             width: 100%;
+            position: relative;
         }
     }
 `;

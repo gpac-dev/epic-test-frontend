@@ -2,8 +2,22 @@
 import { jsx, css } from '@emotion/core';
 
 const selectStyle = css`
+position: relative;
+background-color: White;
+  label{
+    position: absolute;
+    color: #9CA6B5;
+  }
   .l-select{
-
+    -webkit-appearance: none;
+    width: 100%;
+    border: none;
+    height: 54px;
+    border-radius: 30px;
+    color: 
+  }
+  .l-select::-webkit-{
+    visibility: hiden;
   }
 `
 
@@ -12,9 +26,11 @@ export default function ComboBox(props) {
 
   return (
     <div css={selectStyle}>
+      <label htmlFor="select">Hola</label>
       <select name="" id="" className="l-select">
-
+        
       </select>
+      <input type="text" placeholder={props.Po}/>
     </div>
     
   );
