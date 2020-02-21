@@ -10,11 +10,9 @@
   height: 50px;
   margin-top: 10px;
   border: none;
-  align-self: flex-end;
   font-size: 18px;
   font-weight: 700;
   border-radius: 30px;
-  max-width: 376px;
   `;
 
   class SuccessButton extends Component{
