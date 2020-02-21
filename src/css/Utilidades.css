@@ -21,9 +21,9 @@ ESTILOS DE RETICULA
 /*//////////////////////////////////////////////////
 UTILIDADES DINÁMICAS
 //////////////////////////////////////////////////*/
-.u-hide {display: none;}
+.u-hide {display: none !important;}
 .u-height{height: auto;}
-.u-block{display: block;}
+.u-block{display: block !important;}
 .u-relative{position: relative;}
 .u-absolute{position: absolute;}
 .u-absolute-center{position: absolute; margin: auto; left: 0; right: 0;}
@@ -42,6 +42,7 @@ TIPOGRAFIA
 .u-Roboto61 { font-size:calc(23px + (61 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
 .u-Roboto54 { font-size:calc(23px + (54 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
 .u-Roboto50 { font-size:calc(23px + (50 - 23) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
+.u-Roboto45 { font-size:calc(25px + (45 - 25) * ((100vw - 320px) / (1920 - 320))); line-height: normal;}
 .u-Roboto38{font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto35{font-size:calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto30{font-size:calc(20px + (30 - 20) * ((100vw - 320px) / (1920 - 320)));}
@@ -49,6 +50,7 @@ TIPOGRAFIA
 .u-Roboto24{font-size:calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto22{font-size:calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto18{font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto16{font-size:calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));}
 
 
 
@@ -62,6 +64,7 @@ TIPOGRAFIA
 
 .u-Black{font-family: 'Roboto' !important;}
 .u-Light{font-family: 'Roboto' !important;}
+.u-Montse{font-family: 'Montserrat', sans-serif !important;}
 
 .u-upper{text-transform: uppercase;}
 .u-lower{text-transform: lowercase;}
