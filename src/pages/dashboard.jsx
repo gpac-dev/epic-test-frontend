@@ -18,6 +18,7 @@ align-items: center;
 justify-content: center;
 .l-search{
     width: 100%;
+    margin: 70px 0;
 }
 `;
 
@@ -32,7 +33,9 @@ class Dashboard extends Component {
                 <PannelBackground className="c-flex">
                 <div css={DashLayout}>
                     <CardStats/>
-                    <UseAutocomplete className="l-search" PlaceFill="Search by keyword..."  />
+                    <div className="u-padding g-100">
+                        <UseAutocomplete className="l-search" PlaceFill="Search by keyword..."  />
+                    </div>
                     <Actions/>
                     </div>
                 </PannelBackground>
