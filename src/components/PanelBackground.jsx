@@ -10,7 +10,6 @@ const BackContainer = css`
   background-size: cover;
   background-image: url('${Background}');
   overflow: auto;
-  display: flex;
   padding: 0 20px;
 `;
  
@@ -18,10 +17,9 @@ const BackContainer = css`
 
   function PannelBackground(props) {
     // const children = props.children;
-  
     return (
       <React.Fragment>
-          <div css={BackContainer}>
+          <div css={BackContainer} className={props.className}>
 
           {props.children}
           </div>

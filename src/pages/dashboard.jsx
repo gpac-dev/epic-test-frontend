@@ -28,8 +28,8 @@ class Dashboard extends Component {
                 <Layout/>
                 <div className="g-container">
                 <SideBar className="g-container__side"/>
-                <PannelBackground className="g-container__box">
-                    <div className="g-info-container">
+                <PannelBackground className="c-flex">
+                <div className="g-info-container">
                     <CardStats/>
                     <UseAutocomplete/>
                     <Actions/>
