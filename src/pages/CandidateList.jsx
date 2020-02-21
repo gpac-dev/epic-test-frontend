@@ -6,7 +6,10 @@ import SideBar from '../Layout/SideBar';
 import PannelBackground from '../components/PanelBackground';
 import HeadFilter from '../components/ListUtilities/HeadFilter';
 
-
+const Header = {
+    TagSection: 'Candidates',
+    ButtonTag: 'Add Candidate +'
+} 
 class CandidateList extends Component {
     render(){
         return(
@@ -19,8 +22,7 @@ class CandidateList extends Component {
                 <div className="g-container">
                 <SideBar className="g-container__side"/>
                 <PannelBackground className="g-container__box">
-                    <HeadFilter/>
-                    
+                    <HeadFilter {...Header}/>
                 </PannelBackground>
                 </div>
                 

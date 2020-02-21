@@ -11,6 +11,7 @@ const BackContainer = css`
   background-image: url('${Background}');
   overflow: auto;
   display: flex;
+  padding: 0 20px;
 `;
  
 
