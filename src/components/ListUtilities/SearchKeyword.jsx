@@ -1,7 +1,7 @@
   /** @jsx jsx */
   import { jsx, css, Global } from '@emotion/core';
 import { Component, Fragment } from 'react';
-import ComboBox from '../Utilities/SearchAutoComplete';
+import ComboBox from '../Utilities/ComboBox';
 
 
 class SearchKeyWord extends Component{

@@ -11,7 +11,7 @@ const FilterLayout = css`
 class HeadFilter extends Component {
     render() {
         return (
-            <div css={FilterLayout} className="c-flex-around g-100">
+            <div css={FilterLayout} className="c-flex-align-around g-100">
                 <h1>{this.props.TagSection}</h1>
                 <SearchKeyWord/>
                 <ItemKick ActionLabel={this.props.ButtonTag} />
