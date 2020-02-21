@@ -166,8 +166,8 @@ function Login() {
                     <div className="l-loginBox-content">
                         <p className=" u-Roboto45 u-margin-30 u-text-700 l-loginBox-head u-Montse">Do more than just work for a living</p>
                         <form action="" className="">
-                            <InputFill LabelTag="E-mail" />
-                            <InputFill LabelTag="Password" />
+                            <InputFill LabelTag="E-mail" required={true} helper={"Value"}/>
+                            <InputFill LabelTag="Password" required={true} />
                             <SuccessButton TextAction={"Log in"} className="l-loginBox--action" />
                             <p className="u-margin-15 l-loginBox-password">Forgot your password?</p>
                         </form>

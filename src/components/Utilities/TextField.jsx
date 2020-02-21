@@ -37,6 +37,8 @@ class InputFill extends React.Component {
     return (
       <div className={classes.root}>
         <CssTextField
+        required={this.props.required}
+        helperText={this.props.helper}
           className={classes.margin}
           label={this.props.LabelTag}
           variant="outlined"

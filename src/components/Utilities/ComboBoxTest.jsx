@@ -1,22 +1,62 @@
-/** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+/* eslint-disable no-use-before-define */
+import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import Autocomplete from '@material-ui/lab/Autocomplete';
+import { withStyles } from '@material-ui/core';
 
-const selectStyle = css`
-  .l-select{
-
+const CopyTextField = withStyles({
+  root: {
+    border: "none",
+    width: "100%",
+    "& label.Mui-focused": {
+      color: "transparent",
+      padding: "0 15px 0 3px",
+    },
+    "& .MuiInput-underline:after": {
+      borderBottomColor: "tomato"
+    },
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderRadius: "30px"
+      },
+      "&:hover fieldset": {
+        borderColor: "White",
+        borderWidth: "0px"
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "White",
+        borderWidth: "0px"
+      }
+    }
   }
-`
+})(TextField);
+
 
 export default function ComboBox(props) {
-
+  const classes = withStyles();
 
   return (
-    <div css={selectStyle}>
-      <select name="" id="" className="l-select">
+    <Autocomplete css={props.css}
+      id="combo-box-demo"
+      options={top100Films}
+      getOptionLabel={option => option.title}
+      style={{
+        width: '100%',
 
-      </select>
-    </div>
-    
+      }}
+      renderInput={params => (
+        <CopyTextField {...params}
+        id="custom-css-outlined-input"
+
+          style={{ width: '100%' }}
+          className={classes.margin}
+          label={props.InfoAuto}
+          variant="outlined"
+          margin="none"
+          multiline="false"
+          fullWidth />
+      )}
+    />
   );
 }
 
