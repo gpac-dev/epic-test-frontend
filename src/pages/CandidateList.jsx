@@ -5,11 +5,23 @@ import Layout from '../Layout/Layout';
 import SideBar from '../Layout/SideBar';
 import PannelBackground from '../components/PanelBackground';
 import FilterContainer from '../components/ListUtilities/FilterBar';
+import RowContainer from '../components/ListUtilities/RowInfo'
 
 const Header = {
     TagSection: 'Candidates',
     ButtonTag: 'Add Candidate +'
 }
+
+const RowItem ={
+    Label: 'Superintendent',
+    LabelDescription: 'Enviromental Engineer',
+    Industry: 'Energy, Oil & Gas',
+    Owner: 'Samantha Solomon',
+    Activity: 'In Process',
+    Location: 'Sioux Falls, SD',
+    Date: '12/01/20'
+}
+
 class CandidateList extends Component {
     render() {
         return (
@@ -23,6 +35,7 @@ class CandidateList extends Component {
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
                         <FilterContainer {...Header} />
+                        <RowContainer  className="" {...RowItem}/>
                     </PannelBackground>
                 </div>
             </Fragment>

@@ -6,6 +6,8 @@ import SearchKeyWords from './SearchBar';
 
 const FilterLayout = css`
     min-height: 97px;
+    max-width: 1731px;
+    margin: auto;
 `;
 
 class FilterContainer extends Component {

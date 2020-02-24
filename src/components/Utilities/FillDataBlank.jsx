@@ -3,23 +3,6 @@ import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
 
-// const useStyles = makeStyles(theme => ({
-//   root: {
-//     '& > *': {
-//       width: 94,
-//       "&.MuiInput-input":{
-//         width: '500px'
-//     }
-//     },
-//     "&.MuiInput-input":{
-//         width: '500px'
-//     }
-//   },
-//   input:{
-//     fontSize: '30px'
-//   },
-// }));
-
 
 const StyledTextField = withStyles({
     root: {

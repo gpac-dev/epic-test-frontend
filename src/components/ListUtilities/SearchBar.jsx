@@ -47,7 +47,7 @@ align-self: flex-end;
 margin-left: auto;
 `
 
-const ApplyButton = styled.div`
+const ApplyButton = styled.button`
 width: 100%;
 height: 54px;
 background: var(--black);
@@ -55,6 +55,7 @@ border-radius: 27px;
 display: flex;
 justify-conter: center;
 align-items: center;
+border: none;
     p{  
     color: White;
     text-align:center;
@@ -82,7 +83,7 @@ class SearchKeyWords extends Component {
                     </div>
                     <div css={Action}>
                         <ApplyButton>
-                            <p>Gols</p>
+                            <p className="u-text-700 u-Roboto18">Apply</p>
                         </ApplyButton>
                     </div>
                 </div>
