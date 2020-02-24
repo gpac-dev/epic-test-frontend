@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard'
 import CandidateList from './pages/CandidateList'
+import '../src/css/Variables'
 
 
 

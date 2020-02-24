@@ -7,7 +7,7 @@ const ButtonFastAction = css`
     max-width: 253px;
     height: 54px;
     min-width: 250px;
-    background: #1A1C21 0% 0% no-repeat padding-box;
+    background: ${'black'} 0% 0% no-repeat padding-box;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 47px;
     display: flex;
