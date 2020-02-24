@@ -1,5 +1,5 @@
-  /** @jsx jsx */
-  import { jsx, css, Global } from '@emotion/core';
+/** @jsx jsx */
+import { jsx, css, Global } from '@emotion/core';
 import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
 import SideBar from '../Layout/SideBar';
@@ -9,24 +9,22 @@ import FilterContainer from '../components/ListUtilities/FilterBar';
 const Header = {
     TagSection: 'Candidates',
     ButtonTag: 'Add Candidate +'
-} 
+}
 class CandidateList extends Component {
-    render(){
-        return(
+    render() {
+        return (
             <Fragment>
-                <Global styles ={css`
+                <Global styles={css`
                   
                 `}
                 />
-                <Layout/>
+                <Layout />
                 <div className="g-container">
-                <SideBar className="g-container__side"/>
-                <PannelBackground className="g-container__box">
-                    <FilterContainer {...Header}/>
-                </PannelBackground>
+                    <SideBar className="g-container__side" />
+                    <PannelBackground className="g-container__box">
+                        <FilterContainer {...Header} />
+                    </PannelBackground>
                 </div>
-                
-                
             </Fragment>
         )
     }
