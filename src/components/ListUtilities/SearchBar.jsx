@@ -1,7 +1,7 @@
   /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { Component } from 'react';
-import UseAutocomplete from '../../components/Utilities/SearchContent';
+import UseAutocomplete from '../Utilities/SearchContent';
 
 const InputBackground = css `
   background-color: White;
@@ -25,7 +25,7 @@ const InputBackground = css `
 
 
 
-class SearchKeyWord extends Component{
+class SearchKeyWords extends Component{
     render(){
         return(
             <div css={InputBackground}>
@@ -36,4 +36,4 @@ class SearchKeyWord extends Component{
         );
     }
 }
-export default SearchKeyWord;
+export default SearchKeyWords;

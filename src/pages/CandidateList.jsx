@@ -4,7 +4,7 @@ import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
 import SideBar from '../Layout/SideBar';
 import PannelBackground from '../components/PanelBackground';
-import HeadFilter from '../components/ListUtilities/HeadFilter';
+import FilterContainer from '../components/ListUtilities/FilterBar';
 
 const Header = {
     TagSection: 'Candidates',
@@ -22,7 +22,7 @@ class CandidateList extends Component {
                 <div className="g-container">
                 <SideBar className="g-container__side"/>
                 <PannelBackground className="g-container__box">
-                    <HeadFilter {...Header}/>
+                    <FilterContainer {...Header}/>
                 </PannelBackground>
                 </div>
                 
