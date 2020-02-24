@@ -6,7 +6,7 @@ import CardStats from '../components/Dashboard/DashCards';
 import SideBar from '../Layout/SideBar';
 import PannelBackground from '../components/PanelBackground';
 import Actions from '../components/Dashboard/KickActions'
-import UseAutocomplete from '../components/Dashboard/SearchContent';
+import UseAutocomplete from '../components/Utilities/SearchContent';
 
 const DashLayout = css `
 max-width: 1200px;

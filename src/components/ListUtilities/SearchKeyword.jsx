@@ -1,7 +1,7 @@
   /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import { Component } from 'react';
-import UseAutocomplete from '../Dashboard/SearchContent';
+import UseAutocomplete from '../../components/Utilities/SearchContent';
 
 const InputBackground = css `
   background-color: White;
