@@ -7,7 +7,7 @@ background-color: White;
 border-radius: 30px;
   label{
     position: absolute;
-    color: #9CA6B5;
+    color: var(--grey);
   }
   .l-select{
     -webkit-appearance: none;
@@ -15,7 +15,7 @@ border-radius: 30px;
     border: none;
     height: 54px;
     border-radius: 30px;
-    color: #9CA6B5;
+    color: var(--grey);
     font-size: 18px;
     padding-left: 30px;
     &:focus{

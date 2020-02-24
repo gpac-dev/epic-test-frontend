@@ -19,11 +19,11 @@ height: auto;
     flex-direction: column;
     padding: 0 20px;
     &-number{
-        color: #9CA6B5;
+        color: var(--grey);
         margin: 0;
     }
     &-label{
-        color: #9CA6B5;
+        color: var(--grey);
         margin: 0;
 
     }
@@ -55,7 +55,7 @@ const NotificationsPanel = css `
             }
             .l-status-content{
                 p{
-                    color: #9CA6B5 !important;
+                    color: var(--grey) !important;
                 }
             }
         }

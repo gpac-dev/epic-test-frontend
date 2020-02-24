@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
   },
   label: {
     display: 'block',
-    color: '#9CA6B5',
+    color: 'var(--grey)',
     fontWeight: 300,
     position: 'absolute',
     left: 25,
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     border: 'none',
     fontSize: '18px',
     paddingLeft: '25px',
-    color: '#9CA6B5'
+    color: 'var(--grey)'
   },
   listbox: {
     width: '100%',
