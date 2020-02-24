@@ -22,6 +22,9 @@ const Label = styled.div`
 const LabelDescription = styled.div`
 `;
 
+const Industry = styled.div`
+`;
+
 const Owner = styled.div`
 `;
 
@@ -41,13 +44,16 @@ class RowContainer extends Component {
                 <Label className="u-font">
                     {this.props.Label}
                 </Label>
-                <LabelDescription>
+                <LabelDescription className={this.props.className}>
                     {this.props.LabelDescription}
                 </LabelDescription>
+                <Industry>
+                    {this.props.Industry}
+                </Industry>
                 <Owner>
                     {this.props.Owner}
                 </Owner>
-                <Activity>
+                <Activity className={this.props.className}>
                     {this.props.Activity}
                 </Activity>
                 <Location>
@@ -56,6 +62,7 @@ class RowContainer extends Component {
                 <Date>
                     {this.props.Date}
                 </Date>
+                <span></span>
             </RowBox>
         );
     }
