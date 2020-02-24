@@ -39,13 +39,13 @@ const statsLayout = css `
             opacity: .3;
         }
         &--sendout{
-            border-right: 14px solid #50C9F5;
+            border-right: 14px solid var(--blueElectric);
         }
         &--hotitem{
-            border-right: 14px solid #6950F5;
+            border-right: 14px solid var(--purple);
         }
         &--placements{
-            border-right: 14px solid #B0F461
+            border-right: 14px solid var(--greenElectric);
         }
     }
 `;

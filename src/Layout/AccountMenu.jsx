@@ -1,7 +1,6 @@
   /** @jsx jsx */
   import { jsx, css } from '@emotion/core';
-  import '../css/Main.css';
-  import '../css/Utilidades.css';
+  
 
 const DropAccount = css `
 width: 200px;

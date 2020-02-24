@@ -1,7 +1,5 @@
   /** @jsx jsx */
   import { jsx, css } from '@emotion/core';
-  import '../css/Main.css';
-  import '../css/Utilidades.css';
 import { Component } from 'react';
 import Candidate from '../img/icons/user-grey.svg';
 import HotItem from '../img/icons/hot-grey.svg';
@@ -69,7 +67,7 @@ const NotificationsPanel = css `
             p{
                 margin: 0;
                 padding: 0 20px;
-                color: #1A1C21;
+                color: var(--black);
             }
         }
     }

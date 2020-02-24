@@ -1,8 +1,6 @@
 /** @jsx jsx */
 
 import { jsx, css } from '@emotion/core';
-import '../css/Main.css';
-import '../css/Utilidades.css';
 import dots from '../img/dots.svg';
 import doted from '../img/dots.svg';
 import gpac from '../img/GPAC-logo-GB.png';

@@ -7,7 +7,7 @@ const CssTextField = withStyles({
     margin: "10px 0",
     width: "100%",
     "& label.Mui-focused": {
-      color: "#1A1C21",
+      color: "var(--black)",
       backgroundColor: "#eceef2",
       padding: "0 15px 0 3px",
     },
@@ -19,11 +19,11 @@ const CssTextField = withStyles({
         borderRadius: "30px"
       },
       "&:hover fieldset": {
-        borderColor: "#1A1C21",
+        borderColor: "var(--black)",
         borderWidth: "1px"
       },
       "&.Mui-focused fieldset": {
-        borderColor: "#1A1C21",
+        borderColor: "var(--black)",
         borderWidth: "1px"
       }
     }
