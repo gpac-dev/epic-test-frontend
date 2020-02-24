@@ -7,13 +7,14 @@ const RowBox = styled.div`
     max-width: 1731px;
     width: 100%;
     height: 60px;
-    margin: auto;
+    margin: 11px auto;
     box-shadow: 0px 3px 12px #0000000D;
     background-color: White;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+
 `
 
 const Label = styled.div`

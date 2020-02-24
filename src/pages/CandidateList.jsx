@@ -20,6 +20,9 @@ const RowItem ={
     Activity: 'In Process',
     Location: 'Sioux Falls, SD',
     Date: '12/01/20',
+    className:{
+        LabelDescription: 'Ddd'
+    },
 }
 
 class CandidateList extends Component {
@@ -35,6 +38,9 @@ class CandidateList extends Component {
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
                         <FilterContainer {...Header} />
+                        <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="" {...RowItem}/>
                         <RowContainer className="" {...RowItem}/>
                     </PannelBackground>
                 </div>
