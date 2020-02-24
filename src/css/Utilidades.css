@@ -217,6 +217,7 @@ ESTILOS DE FLEXBOX
 /*Estilos flexbox */
 .c-self-center{align-self: center;}
 .c-align{align-items: center;}
+.c-flexn{display: flex;}
 .c-plain-flex{display: flex;}
 .c-flex{display: flex; align-items: center;}
 .c-flexn-center{display: flex; align-items: center; justify-content: center;}
