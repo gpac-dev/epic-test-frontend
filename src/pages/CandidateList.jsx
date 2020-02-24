@@ -6,6 +6,7 @@ import SideBar from '../Layout/SideBar';
 import PannelBackground from '../components/PanelBackground';
 import FilterContainer from '../components/ListUtilities/FilterBar';
 import RowContainer from '../components/ListUtilities/RowInfo'
+import TitleRow from '../components/ListUtilities/HeaderRow';
 
 const Header = {
     TagSection: 'Candidates',
@@ -20,9 +21,17 @@ const RowItem ={
     Activity: 'In Process',
     Location: 'Sioux Falls, SD',
     Date: '12/01/20',
-    className:{
-        LabelDescription: 'Ddd'
-    },
+
+}
+
+const Titles ={
+    Label: 'Functional Title',
+    LabelDescription: 'Company',
+    Industry: 'Industry',
+    Owner: 'Owner',
+    Activity: 'Activity',
+    Location: 'Location',
+    Date: 'Date',
 }
 
 class CandidateList extends Component {
@@ -38,6 +47,7 @@ class CandidateList extends Component {
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
                         <FilterContainer {...Header} />
+                        <TitleRow {...Titles}/>
                         <RowContainer className="" {...RowItem}/>
                         <RowContainer className="" {...RowItem}/>
                         <RowContainer className="" {...RowItem}/>
