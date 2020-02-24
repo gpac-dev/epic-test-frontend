@@ -22,6 +22,7 @@ const InputBackground = css `
 
         }
         &-item{
+            height: 54px;
             &--label{
                 z-index: 3;
                 &:focus{

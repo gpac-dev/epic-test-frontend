@@ -13,25 +13,26 @@ const BootstrapInput = withStyles(theme => ({
     'label + &': {
       
     },
+    height: '100%'
   },
   input: {
-    borderRadius: 4,
     width: '100%',
     maxWidth: '136px',
     position: 'relative',
     backgroundColor: theme.palette.background.paper,
     border: '1px solid White',
     fontSize: 16,
+    height: '32px',
     padding: '10px 26px 10px 12px',
-    transition: theme.transitions.create(['border-color', 'box-shadow']),
-    // Use the system font instead of the default Roboto font.
+    display: 'flex',
+    alignItems: 'center',
     fontFamily: [
       'Roboto',
       'sans-serif',
     ].join(','),
     '&:focus': {
-      borderRadius: 4,
-      borderColor: '#80bdff',
+      borderColor: 'White',
+      backgroundColor: "White"
     },
   },
 }))(InputBase);
@@ -51,6 +52,11 @@ const useStyles = makeStyles(theme => ({
         top: "-12px",
         left: "10px",
         pointerEvents: "none"
+      },
+      selected:{
+          "&.MuiSelect-select:focus":{
+            color: 'tomato'
+          }
       }
   }
 }));
@@ -69,7 +75,7 @@ export default function SelectItem(props) {
           labelId="demo-customized-select-label"
           id="demo-customized-select"
           value={age}
-    
+          className={classes.selected}
           onChange={handleChange}
           input={<BootstrapInput />}
         >
