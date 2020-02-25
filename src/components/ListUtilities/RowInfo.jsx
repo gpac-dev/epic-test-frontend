@@ -59,6 +59,7 @@ max-width: 128px;
 width: 100%;
 `;
 
+
 class RowContainer extends Component {
     render() {
         return (
@@ -77,7 +78,15 @@ class RowContainer extends Component {
                 </Owner>
                 <Activity className="l-row-activity">
                     <span>{this.props.Activity}</span>
-                    <PopItem/>
+                    <PopItem>
+                        <p className="u-Roboto18 u-white u-text-700 u-margin-0">{this.props.HeadPop}</p>
+                        <p className="u-Roboto18 u-white u-text-300 u-margin-5">{this.props.DatePop}</p>
+                        <p className="u-Roboto14 u-white u-text-300 u-margin-0">{this.props.legal}</p>
+                        <p className="l-popOver-More u-Roboto14 u-white u-text-500  u-absolute">View More ></p>
+                        <div className="l-popOver-status">
+                            <p className="u-Roboto14 u-margin-0">{this.props.Status}</p>
+                        </div>
+                    </PopItem>
                     <span className="l-row-activity-circle">
                     </span>
                 </Activity>

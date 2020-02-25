@@ -35,21 +35,45 @@ width: 236px;
     width: 239px;
     height: 136px;
     background-color: var(--black);
+    position: relative;
+    padding: 14px 20px 0;
+    &-More{
+        right: 14px;
+        bottom: 5px;
+    }
+    &-status{
+        width: 82px;
+        height: 22px;
+        background-color: currentColor;
+        border-radius: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -33px;
+        top: 7px;
+        p{
+            color: white !important;
+            text-align: center;
+            font-weight: 300;
+        }
+    }
    
     }
     
 `;
 
-class PopItem extends Component {
-    render(){
-        return(
-            <div css={PopBox} className={this.props.className}>
-            <div className="l-popOver">
-             
-             </div>
-            </div>
-         
-        );
-    }
-}
-export default PopItem;
+
+
+function PopItem(props) {
+    return (
+        <div css={PopBox} className={props.className}>
+        <div className="l-popOver">
+           {props.children}
+        </div>
+    </div>
+    );
+  }
+  
+  export default PopItem;
+  
