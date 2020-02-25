@@ -28,11 +28,14 @@ const FilterLayout = css`
 class FilterContainer extends Component {
     render() {
         return (
-            <div css={FilterLayout} className="c-flexn-align-around g-100 l-filter">
+            <div css={FilterLayout} className={this.props.className}>
+                 <div  className="c-flexn-align-around g-100 l-filter">
                 <h1>{this.props.TagSection}</h1>
                 <SearchKeyWords className="l-filter-container" />
                 <ItemKick ActionLabel={this.props.ButtonTag} />
             </div>
+            </div>
+           
         );
     }
 }

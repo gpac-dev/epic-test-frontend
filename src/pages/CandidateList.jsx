@@ -9,6 +9,8 @@ import RowContainer from '../components/ListUtilities/RowInfo'
 import TitleRow from '../components/ListUtilities/HeaderRow';
 import CheckFilter from '../components/ListUtilities/CheckBoxFilter';
 import PaginationLink from '../components/ListUtilities/Pagination';
+import User from '../img/icons/user.svg'
+import UserGrey from '../img/icons/user-grey.svg'
 
 const Header = {
     TagSection: 'Candidates',
@@ -41,14 +43,26 @@ class CandidateList extends Component {
         return (
             <Fragment>
                 <Global styles={css`
-                  
+
+                    .l-filter{
+                        &:last-child {
+                            .l-kick-icon{
+                                background-image: url('${UserGrey}');
+                                
+                            }
+                            &:hover{
+                                .l-kick-icon{
+                                    background-image: url('${User}');
+                                }
+                          }
+                    }
                 `}
                 />
                 <Layout />
                 <div className="g-container">
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
-                        <FilterContainer {...Header} />
+                        <FilterContainer {...Header} className="l-candidate"/>
                         <CheckFilter NumberCount='53,457'/>
                         <TitleRow {...Titles}/>
                         <RowContainer className="" {...RowItem}/>
