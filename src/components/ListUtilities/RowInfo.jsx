@@ -48,7 +48,7 @@ width: 100%;
 `;
 
 const Date = styled.div`
-max-width: 90px;
+max-width: 128px;
 width: 100%;
 `;
 
@@ -56,25 +56,25 @@ class RowContainer extends Component {
     render() {
         return (
             <RowBox className={this.props.className} >
-                <Label className="u-font">
+                <Label className="l-row-label">
                     {this.props.Label}
                 </Label>
-                <LabelDescription className={this.props.className}>
+                <LabelDescription className="l-row-desc">
                     {this.props.LabelDescription}
                 </LabelDescription>
-                <Industry>
+                <Industry className="l-row-industry">
                     {this.props.Industry}
                 </Industry>
-                <Owner>
+                <Owner className="l-row-owner">
                     {this.props.Owner}
                 </Owner>
-                <Activity className={this.props.className}>
+                <Activity className="l-row-activity">
                     {this.props.Activity}
                 </Activity>
-                <Location>
+                <Location className="l-row-location">
                     {this.props.Location}
                 </Location>
-                <Date>
+                <Date className="l-row-date">
                     {this.props.Date}
                 </Date>
                 <span></span>

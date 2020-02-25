@@ -29,13 +29,13 @@ const RowItem ={
 }
 
 const Titles ={
-    Label: 'Functional Title',
-    LabelDescription: 'Company',
+    Label: 'Name',
+    LabelDescription: 'Functional Title',
     Industry: 'Industry',
     Owner: 'Owner',
-    Activity: 'Activity',
+    Activity: 'Activity Status',
     Location: 'Location',
-    Date: 'Date',
+    Date: 'Added Date',
 }
 
 class CandidateList extends Component {
