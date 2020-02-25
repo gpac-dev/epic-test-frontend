@@ -57,20 +57,18 @@ class CandidateList extends Component {
                                 border-radius: 50%;
                                 display: inline-flex;
                                 vertical-align: middlie;
-                                margin-left: 10px;
-                               
+                                margin-left: 10px;  
                             }
                             >div{
                                 position: absolute;
                                 z-index: 2;
-                                left: -21px;
+                                left: 8px;
                                 margin:  auto;
                                 right: 0;
                                 bottom: 49px;
                                 transform: scale(1,0) ;
                                 transform-origin: bottom center;
                                 opacity: 0;
-                                
                             }
                             &:hover{
                                 >div{
@@ -80,6 +78,7 @@ class CandidateList extends Component {
                                     transform: scale(1,1);
                                     pointer-events: all;
                                 }
+                                
                             }
                         }
                         &-sendout{
@@ -99,6 +98,7 @@ class CandidateList extends Component {
                             }
                             .l-row-activity-circle{
                                 background-color: var(--active);
+                                display: none !important;
                             }
                         }
                         
@@ -174,11 +174,14 @@ class CandidateList extends Component {
                         <RowContainer className="l-row l-row-sendout" {...RowItem}
                              HeadPop="Interview Date"
                              legal=""
+                             Activity="Sen Out"
                         />
                         <RowContainer className="l-row l-row-process--green" {...RowItem}/>
                         <RowContainer className="l-row l-row-process--green" {...RowItem}/>
                         <RowContainer className="l-row l-row-process--red" {...RowItem}/>
-                        <RowContainer className="l-row l-row-placement" {...RowItem}/>
+                        <RowContainer className="l-row l-row-placement" {...RowItem}
+                            Activity="Placement"
+                        />
                         <PaginationLink/>
                     </PannelBackground>
                 </div>

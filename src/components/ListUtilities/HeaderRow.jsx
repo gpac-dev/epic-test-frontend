@@ -58,6 +58,7 @@ const Activity = styled.div`
 max-width: 138px;
 width: 100%;
 margin: 0 5px;
+text-align: right;
 `;
 
 const Location = styled.div`

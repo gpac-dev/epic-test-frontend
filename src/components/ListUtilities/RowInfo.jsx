@@ -51,6 +51,7 @@ display: flex;
 padding: 0 5px;
 align-items: center;
 min-width: 138px;
+justify-content: flex-end;
 `;
 
 const Location = styled.div`
@@ -93,6 +94,7 @@ class RowContainer extends Component {
                         </div>
                     </PopItem>
                     <span className="l-row-activity-circle">
+                    
                     </span>
                 </Activity>
                 <Location className="l-row-location">
