@@ -8,6 +8,7 @@ import FilterContainer from '../components/ListUtilities/FilterBar';
 import RowContainer from '../components/ListUtilities/RowInfo'
 import TitleRow from '../components/ListUtilities/HeaderRow';
 import CheckFilter from '../components/ListUtilities/CheckBoxFilter';
+import PaginationLink from '../components/ListUtilities/Pagination';
 
 const Header = {
     TagSection: 'Candidates',
@@ -54,6 +55,11 @@ class CandidateList extends Component {
                         <RowContainer className="" {...RowItem}/>
                         <RowContainer className="" {...RowItem}/>
                         <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="" {...RowItem}/>
+                        <PaginationLink/>
                     </PannelBackground>
                 </div>
             </Fragment>
