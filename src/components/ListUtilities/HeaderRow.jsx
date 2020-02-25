@@ -9,7 +9,7 @@ const RowBox = styled.div`
     height: 60px;
     margin: 11px auto;
     box-shadow: 0px 3px 12px #0000000D;
-    background-color: White;
+    background-color: #F7F7F7;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -18,24 +18,38 @@ const RowBox = styled.div`
 `
 
 const Label = styled.div`
+max-width: 191px;
+width: 100%;
 `;
 
 const LabelDescription = styled.div`
+max-width: 205px;
+width: 100%;
 `;
 
 const Industry = styled.div`
+max-width: 321px;
+width: 100%;
 `;
 
 const Owner = styled.div`
+max-width: 176px;
+width: 100%;
 `;
 
 const Activity = styled.div`
+max-width: 138px;
+width: 100%;
 `;
 
 const Location = styled.div`
+max-width: 126px;
+width: 100%;
 `;
 
 const Date = styled.div`
+max-width: 90px;
+width: 100%;
 `;
 
 class TitleRow extends Component {
@@ -45,7 +59,7 @@ class TitleRow extends Component {
                 <Label className="u-font">
                     {this.props.Label}
                 </Label>
-                <LabelDescription className={this.props.className}>
+                <LabelDescription >
                     {this.props.LabelDescription}
                 </LabelDescription>
                 <Industry>
@@ -54,7 +68,7 @@ class TitleRow extends Component {
                 <Owner>
                     {this.props.Owner}
                 </Owner>
-                <Activity className={this.props.className}>
+                <Activity >
                     {this.props.Activity}
                 </Activity>
                 <Location>

@@ -18,24 +18,38 @@ const RowBox = styled.div`
 `
 
 const Label = styled.div`
+max-width: 191px;
+width: 100%;
 `;
 
 const LabelDescription = styled.div`
+max-width: 205px;
+width: 100%;
 `;
 
 const Industry = styled.div`
+max-width: 321px;
+width: 100%;
 `;
 
 const Owner = styled.div`
+max-width: 176px;
+width: 100%;
 `;
 
 const Activity = styled.div`
+max-width: 138px;
+width: 100%;
 `;
 
 const Location = styled.div`
+max-width: 126px;
+width: 100%;
 `;
 
 const Date = styled.div`
+max-width: 90px;
+width: 100%;
 `;
 
 class RowContainer extends Component {
