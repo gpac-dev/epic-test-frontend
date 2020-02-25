@@ -14,6 +14,7 @@ const RowBox = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0 20px;
         div{
             font-weight: 300;
             text-transform: uppercase;

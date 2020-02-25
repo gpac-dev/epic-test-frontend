@@ -43,12 +43,44 @@ class CandidateList extends Component {
         return (
             <Fragment>
                 <Global styles={css`
-
+                    .l-row{
+                        padding: 0 20px;
+                        &-sendout{
+                            .l-row-activity{
+                                color: var(--purple);
+                            }
+                        }
+                        &-placement{
+                            .l-row-activity{
+                                color: var(--active);
+                            }
+                        }
+                        
+                        &-process{
+                            &--green{
+                                .l-row-activity{
+                                    color: var(--active);
+                                }
+                            }
+                            &--orange{
+                                .l-row-activity{
+                                    color: var(--orange)
+                                }
+                            }
+                            &--red{
+                                .l-row-activity{
+                                    color: var(--red)
+                                }
+                                border-left: 8px solid var(--red);
+                                padding: 0 20px 0 12px;
+                            }
+                            
+                        }
+                    }
                     .l-filter{
                         &:last-child {
                             .l-kick-icon{
                                 background-image: url('${UserGrey}');
-                                
                             }
                             &:hover{
                                 .l-kick-icon{
@@ -56,6 +88,7 @@ class CandidateList extends Component {
                                 }
                           }
                     }
+                    
                 `}
                 />
                 <Layout />
@@ -65,14 +98,14 @@ class CandidateList extends Component {
                         <FilterContainer {...Header} className="l-candidate"/>
                         <CheckFilter NumberCount='53,457'/>
                         <TitleRow {...Titles}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
-                        <RowContainer className="" {...RowItem}/>
+                        <RowContainer className="l-row l-row-process--green" {...RowItem}/>
+                        <RowContainer className="l-row l-row-process--orange" {...RowItem}/>
+                        <RowContainer className="l-row l-row-process--red" {...RowItem}/>
+                        <RowContainer className="l-row l-row-sendout" {...RowItem}/>
+                        <RowContainer className="l-row l-row-process--green" {...RowItem}/>
+                        <RowContainer className="l-row l-row-process--green" {...RowItem}/>
+                        <RowContainer className="l-row l-row-process--red" {...RowItem}/>
+                        <RowContainer className="l-row l-row-placement" {...RowItem}/>
                         <PaginationLink/>
                     </PannelBackground>
                 </div>

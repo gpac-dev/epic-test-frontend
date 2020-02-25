@@ -17,8 +17,9 @@ injectGlobal`
   --purple: #6950F5;
   --greenElectric: #B0F461;
   --grey: #9CA6B5;
-  --succes: #4056F4;
-  --active: #27AE60
+  --success: #4056F4;
+  --active: #27AE60;
+  --orange: #F39C12;
 
 }
 
