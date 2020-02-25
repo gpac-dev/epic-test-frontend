@@ -63,10 +63,10 @@ class CandidateList extends Component {
                             >div{
                                 position: absolute;
                                 z-index: 2;
-                                left: -26px;
+                                left: -21px;
                                 margin:  auto;
                                 right: 0;
-                                bottom: 40px;
+                                bottom: 49px;
                                 transform: scale(1,0) ;
                                 transform-origin: bottom center;
                                 opacity: 0;
