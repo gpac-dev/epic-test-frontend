@@ -95,7 +95,6 @@ class CandidateList extends Component {
                             width: 14px;
                             height: 14px;
                             border-radius: 50%;
-                          
                             display: inline-flex;
                             vertical-align: middlie;
                             margin-left: 10px;

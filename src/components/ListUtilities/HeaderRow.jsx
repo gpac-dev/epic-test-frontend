@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Component } from 'react';
 import styled from '@emotion/styled'
+import ArrowDown from '../../img/icons/ArrowDown.svg'
 
 const RowBox = styled.div`
     max-width: 1731px;
@@ -19,6 +20,14 @@ const RowBox = styled.div`
             font-weight: 300;
             text-transform: uppercase;
         }
+        .l-row-arrow{
+            width: 12px;
+            height: auto;
+            display: inline-flex;
+            vertical-align: middle;
+            margin-left: 10px;
+
+        }
 
 `
 
@@ -30,26 +39,31 @@ width: 100%;
 const LabelDescription = styled.div`
 max-width: 205px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Industry = styled.div`
 max-width: 321px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Owner = styled.div`
 max-width: 176px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Activity = styled.div`
 max-width: 138px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Location = styled.div`
 max-width: 126px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Date = styled.div`
@@ -63,6 +77,7 @@ class TitleRow extends Component {
             <RowBox className={this.props.className} >
                 <Label className="l-row-label">
                     {this.props.Label}
+                    <img className="l-row-arrow" src={ArrowDown} alt=""/>
                 </Label>
                 <LabelDescription className="l-row-desc">
                     {this.props.LabelDescription}
@@ -81,6 +96,7 @@ class TitleRow extends Component {
                 </Location>
                 <Date className="l-row-date">
                     {this.props.Date}
+                    <img className="l-row-arrow" src={ArrowDown} alt=""/>
                 </Date>
                 <span></span>
             </RowBox>

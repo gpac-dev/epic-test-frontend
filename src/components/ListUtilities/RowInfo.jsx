@@ -25,26 +25,31 @@ width: 100%;
 const LabelDescription = styled.div`
 max-width: 205px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Industry = styled.div`
 max-width: 321px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Owner = styled.div`
 max-width: 176px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Activity = styled.div`
 max-width: 138px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Location = styled.div`
 max-width: 126px;
 width: 100%;
+margin: 0 5px;
 `;
 
 const Date = styled.div`
