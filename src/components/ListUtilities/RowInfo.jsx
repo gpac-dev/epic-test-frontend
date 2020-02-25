@@ -69,7 +69,8 @@ class RowContainer extends Component {
                     {this.props.Owner}
                 </Owner>
                 <Activity className="l-row-activity">
-                    {this.props.Activity}
+                    <span>{this.props.Activity}</span>
+                    <span className="l-row-activity-circle"></span>
                 </Activity>
                 <Location className="l-row-location">
                     {this.props.Location}

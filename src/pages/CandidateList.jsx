@@ -49,10 +49,16 @@ class CandidateList extends Component {
                             .l-row-activity{
                                 color: var(--purple);
                             }
+                            .l-row-activity-circle{
+                                background-color: var(--purple);
+                            }
                         }
                         &-placement{
                             .l-row-activity{
                                 color: var(--active);
+                            }
+                            .l-row-activity-circle{
+                                background-color: var(--active);
                             }
                         }
                         
@@ -61,20 +67,38 @@ class CandidateList extends Component {
                                 .l-row-activity{
                                     color: var(--active);
                                 }
+                                .l-row-activity-circle{
+                                    background-color: var(--active);
+                                }
                             }
                             &--orange{
                                 .l-row-activity{
                                     color: var(--orange)
+                                }
+                                .l-row-activity-circle{
+                                    background-color: var(--orange);
                                 }
                             }
                             &--red{
                                 .l-row-activity{
                                     color: var(--red)
                                 }
+                                .l-row-activity-circle{
+                                    background-color: var(--red);
+                                }
                                 border-left: 8px solid var(--red);
                                 padding: 0 20px 0 12px;
                             }
                             
+                        }
+                        .l-row-activity-circle{
+                            width: 14px;
+                            height: 14px;
+                            border-radius: 50%;
+                          
+                            display: inline-flex;
+                            vertical-align: middlie;
+                            margin-left: 10px;
                         }
                     }
                     .l-filter{
