@@ -36,7 +36,8 @@ width: 236px;
     height: 136px;
     background-color: var(--black);
     position: relative;
-    padding: 14px 20px 0;
+    padding: 14px 17px 0;
+    border-radius: 5px;
     &-More{
         right: 14px;
         bottom: 5px;

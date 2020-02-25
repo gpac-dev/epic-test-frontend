@@ -81,7 +81,7 @@ class RowContainer extends Component {
                     <PopItem>
                         <p className="u-Roboto18 u-white u-text-700 u-margin-0">{this.props.HeadPop}</p>
                         <p className="u-Roboto18 u-white u-text-300 u-margin-5">{this.props.DatePop}</p>
-                        <p className="u-Roboto14 u-white u-text-300 u-margin-0">{this.props.legal}</p>
+                        <p className="u-Roboto14 u-white u-text-300 u-margin-0 l-popOVer-legal">{this.props.legal}</p>
                         <p className="l-popOver-More u-Roboto14 u-white u-text-500  u-absolute">View More ></p>
                         <div className="l-popOver-status">
                             <p className="u-Roboto14 u-margin-0">{this.props.Status}</p>

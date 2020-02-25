@@ -25,7 +25,7 @@ const RowItem ={
     Activity: 'In Process',
     Location: 'Sioux Falls, SD',
     Date: '12/01/20',
-    HeadPop: 'Interview Date',
+    HeadPop: 'Added Date',
     DatePop: '19/01/2020',
     legal: "Recently Added",
     Status: 'SendOut'
@@ -85,6 +85,9 @@ class CandidateList extends Component {
                         &-sendout{
                             .l-row-activity{
                                 color: var(--purple);
+                                .l-popOVer-legal{
+                                    display: none;
+                                }
                             }
                             .l-row-activity-circle{
                                 background-color: var(--purple);
@@ -100,9 +103,13 @@ class CandidateList extends Component {
                         }
                         
                         &-process{
+                           
                             &--green{
                                 .l-row-activity{
                                     color: var(--active);
+                                    .l-popOver-More {
+                                        display: none;
+                                    }
                                 }
                                 .l-row-activity-circle{
                                     background-color: var(--active);
@@ -110,7 +117,10 @@ class CandidateList extends Component {
                             }
                             &--orange{
                                 .l-row-activity{
-                                    color: var(--orange)
+                                    color: var(--orange);
+                                    .l-popOver-More {
+                                        display: none;
+                                    }
                                 }
                                 .l-row-activity-circle{
                                     background-color: var(--orange);
@@ -118,11 +128,15 @@ class CandidateList extends Component {
                             }
                             &--red{
                                 .l-row-activity{
-                                    color: var(--red)
+                                    color: var(--red);
+                                    .l-popOver-More {
+                                        display: none;
+                                    }
                                 }
                                 .l-row-activity-circle{
                                     background-color: var(--red);
                                 }
+                               
                                 border-left: 8px solid var(--red);
                                 padding: 0 20px 0 12px;
                             }
@@ -152,11 +166,15 @@ class CandidateList extends Component {
                         <CheckFilter NumberCount='53,457'/>
                         <TitleRow {...Titles}/>
                         <RowContainer className="l-row l-row-process--green" {...RowItem}
-                            HeadPop="ddd"
+                            HeadPop="Added Date"
+                            legal="Recently Added"
                         />
                         <RowContainer className="l-row l-row-process--orange" {...RowItem}/>
                         <RowContainer className="l-row l-row-process--red" {...RowItem}/>
-                        <RowContainer className="l-row l-row-sendout" {...RowItem}/>
+                        <RowContainer className="l-row l-row-sendout" {...RowItem}
+                             HeadPop="Interview Date"
+                             legal=""
+                        />
                         <RowContainer className="l-row l-row-process--green" {...RowItem}/>
                         <RowContainer className="l-row l-row-process--green" {...RowItem}/>
                         <RowContainer className="l-row l-row-process--red" {...RowItem}/>
