@@ -7,6 +7,7 @@ import PannelBackground from '../components/PanelBackground';
 import FilterContainer from '../components/ListUtilities/FilterBar';
 import RowContainer from '../components/ListUtilities/RowInfo'
 import TitleRow from '../components/ListUtilities/HeaderRow';
+import CheckFilter from '../components/ListUtilities/CheckBoxFilter';
 
 const Header = {
     TagSection: 'Candidates',
@@ -47,6 +48,7 @@ class CandidateList extends Component {
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
                         <FilterContainer {...Header} />
+                        <CheckFilter NumberCount='53,457'/>
                         <TitleRow {...Titles}/>
                         <RowContainer className="" {...RowItem}/>
                         <RowContainer className="" {...RowItem}/>
