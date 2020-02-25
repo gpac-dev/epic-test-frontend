@@ -68,7 +68,7 @@ border: none;
 class SearchKeyWords extends Component {
     render() {
         return (
-            <div css={InputBackground}>
+            <div css={InputBackground} className={this.props.className}>
                 <div className="c-flexn">
                     <div className="l-searchAutocomplete">
                         <UseAutocomplete className="l-searchAutocomplete-input" PlaceFill="Search by Keyword" />
