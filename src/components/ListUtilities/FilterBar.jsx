@@ -12,10 +12,11 @@ const FilterLayout = css`
         text-transform: uppercase;
         font-size:calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));
        }
+        
+    .l-filter{
         @media (max-width: 1620px){
             flex-wrap: wrap;
         }
-    .l-filter{
         &-container{
             min-width: 970px;
             @media (max-width: 1620px){
