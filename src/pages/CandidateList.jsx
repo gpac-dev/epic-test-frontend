@@ -45,6 +45,39 @@ class CandidateList extends Component {
                 <Global styles={css`
                     .l-row{
                         padding: 0 20px;
+                        .l-row-activity{
+                            position: relative;
+                            .l-row-activity-circle{
+                                width: 14px;
+                                height: 14px;
+                                border-radius: 50%;
+                                display: inline-flex;
+                                vertical-align: middlie;
+                                margin-left: 10px;
+                               
+                            }
+                            >div{
+                                position: absolute;
+                                z-index: 2;
+                                left: -26px;
+                                margin:  auto;
+                                right: 0;
+                                bottom: 40px;
+                                transform: scale(1,0) ;
+                                transform-origin: bottom center;
+                                opacity: 0;
+                                
+                            }
+                            &:hover{
+                                >div{
+                                    transition: .3s cubic-bezier(.46,.03,.52,.96);
+                                    display: block;
+                                    opacity: 1;
+                                    transform: scale(1,1);
+                                    pointer-events: all;
+                                }
+                            }
+                        }
                         &-sendout{
                             .l-row-activity{
                                 color: var(--purple);
@@ -91,14 +124,7 @@ class CandidateList extends Component {
                             }
                             
                         }
-                        .l-row-activity-circle{
-                            width: 14px;
-                            height: 14px;
-                            border-radius: 50%;
-                            display: inline-flex;
-                            vertical-align: middlie;
-                            margin-left: 10px;
-                        }
+                      
                     }
                     .l-filter{
                         &:last-child {

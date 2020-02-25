@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import { Component } from 'react';
 import styled from '@emotion/styled'
+import PopItem from '../Utilities/PopOver';
 
 const RowBox = styled.div`
     max-width: 1731px;
@@ -20,6 +21,7 @@ const RowBox = styled.div`
 const Label = styled.div`
 max-width: 191px;
 width: 100%;
+font-weight: 700;
 `;
 
 const LabelDescription = styled.div`
@@ -75,7 +77,9 @@ class RowContainer extends Component {
                 </Owner>
                 <Activity className="l-row-activity">
                     <span>{this.props.Activity}</span>
-                    <span className="l-row-activity-circle"></span>
+                    <PopItem/>
+                    <span className="l-row-activity-circle">
+                    </span>
                 </Activity>
                 <Location className="l-row-location">
                     {this.props.Location}
