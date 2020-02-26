@@ -20,8 +20,19 @@ const Header = {
     ButtonTag: 'Add Company +'
 }
 
+const RowItem = {
+    Label: 'A + B Construction',
+    LabelDescription: '',
+    Industry: 'Engineering Surveying Civil',
+    Owner: 'Samantha Salomon',
+    Status: 'Fee Agreement',
+    Activity: 'Fee Agreement',
+    Location: 'Sioux Falls, SD',
+    Date: '12/01/20',
+}
+
 const Titles = {
-    Label: 'Name',
+    Label: 'Nameeee',
     LabelDescription: 'Industry',
     Industry: 'Industry',
     Owner: 'Owner',
@@ -31,21 +42,7 @@ const Titles = {
 }
 
 
-const RowItem = {
-    Label: 'A + B Construction',
-    LabelDescription: 'Engineering Surveying Civil',
-    Industry: '',
-    Owner: 'Samantha Salomon',
-    Status: 'Fee Agreement',
-    Activity: 'Fee Agreement',
-    Location: 'Sioux Falls, SD',
-    Date: '12/01/20',
 
-    HeadPop: 'Added Date',
-    DatePop: '19/01/2020',
-    legal: "Recently Added"
-
-}
 
 
 const HeadStylesRow = ({ className }) => (
@@ -58,7 +55,7 @@ const TitlesControls = styled(HeadStylesRow)`
         }
   `
 const RowStyle = ({ className }) => (
-    <RowContainer {...Titles} className={className} />
+    <RowContainer {...RowItem} className={className} />
 )
 
 const IncrivelRow = styled(RowStyle)`
@@ -77,7 +74,7 @@ const IncrivelRow = styled(RowStyle)`
         }
   `
 
-//   LabelDescription
+
 
 
 
@@ -109,11 +106,9 @@ class CompanyList extends Component {
                         </BarCheckBox>
                         <TitlesControls />
                         <IncrivelRow 
-                            className="l-row " />
+                            className="l-row " {...RowItem}/>
                         <IncrivelRow
                             className="l-row " {...RowItem}
-                            HeadPop="Added Date"
-                            legal="Recently Added"
                         />
                         <IncrivelRow
                             className="l-row " {...RowItem} />
@@ -121,9 +116,7 @@ class CompanyList extends Component {
                             className="l-row" {...RowItem} />
                         <IncrivelRow
                             className="l-row " {...RowItem}
-                            HeadPop="Interview Date"
-                            legal=""
-                            Activity="Sen Out"
+                           
                         />
                         <IncrivelRow
                             className="l-row " {...RowItem} />
@@ -133,7 +126,7 @@ class CompanyList extends Component {
                             className="l-row" {...RowItem} />
                         <IncrivelRow
                             className="l-row " {...RowItem}
-                            Activity="Placement"
+                            
                         />
                         <PaginationLink />
                     </PannelBackground>
