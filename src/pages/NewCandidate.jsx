@@ -9,9 +9,7 @@ import PannelBackground from '../components/PanelBackground';
 import InnerLayout from '../Layout/InnerLayout/InnerLayout';
 import InputFill from '../components/Utilities/TextField'
 import ComboBox from '../components/Utilities/SelectRounded'
-
-
-
+import PointTitle from '../components/NewItemsUtilities/PointTitle';
 
 
 
@@ -26,6 +24,7 @@ const FormBox = styled.div`
 `
 
 const HeaderTitle = styled.h1`
+margin-bottom: 57px;
 
 `
 const InputContainer = css`
@@ -58,47 +57,52 @@ class CandidateNew extends Component {
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
                             <FormBox>
-                                    <HeaderTitle className="u-Roboto30 u-upper u-margin-0">New Candidate</HeaderTitle >
+                                    <HeaderTitle className="u-Roboto32 u-upper u-margin-0">New Candidate</HeaderTitle >
+                                    <PointTitle  NameSection="Personal Data" SectionNumber="1"></PointTitle>
                                         <div className="c-flex-around">
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="First Name"> </InputFill>
+                                            </div>
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="Last Name"> </InputFill>
+                                            </div>
+                                            <div css={InputContainer}>
+                                                <ComboBox LabelSelect='Industry'></ComboBox>
+                                            </div>
+                                            <div css={InputContainer}>
+                                                <ComboBox LabelSelect='Functional Title'></ComboBox>
+                                            </div>      
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="Title"> </InputFill>
+                                            </div>  
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="Phone"> </InputFill>
+                                            </div>  
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="Email"> </InputFill>
+                                            </div>
+                                            <div css={InputContainer}>
+                                                <ComboBox LabelSelect='State'></ComboBox>
+                                            </div>
+                                            <div css={InputContainer}>
+                                                <ComboBox LabelSelect='City'></ComboBox>
+                                            </div>   
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="Zip"> </InputFill>
+                                            </div> 
+                                            <div css={InputContainer}>
+                                                <ComboBox LabelSelect='Source'></ComboBox>
+                                            </div> 
+                                            <div css={InputContainer}>
+                                                <InputFill LabelTag="Source URL"> </InputFill>
+                                            </div>                     
+                                        </div>
+                                        <div>
 
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="First Name"> </InputFill>
                                         </div>
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Last Name"> </InputFill>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <ComboBox LabelSelect='Industry'></ComboBox>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <ComboBox LabelSelect='Functional Title'></ComboBox>
-                                        </div>      
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Title"> </InputFill>
-                                        </div>  
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Phone"> </InputFill>
-                                        </div>  
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Email"> </InputFill>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <ComboBox LabelSelect='State'></ComboBox>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <ComboBox LabelSelect='City'></ComboBox>
-                                        </div>   
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Zip"> </InputFill>
-                                        </div> 
-                                        <div css={InputContainer}>
-                                            <ComboBox LabelSelect='Source'></ComboBox>
-                                        </div> 
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Source URL"> </InputFill>
-                                        </div>
-                                     
-                                               
+                                        <div className="c-flex">
+                                            <PointTitle  NameSection="Resume File" SectionNumber="2"></PointTitle>
+                                            <PointTitle  NameSection="Blue Sheet" SectionNumber="3"></PointTitle>
                                         </div>
                             </FormBox>
                         </InnerLayout>
