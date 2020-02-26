@@ -10,6 +10,13 @@ import InnerLayout from '../Layout/InnerLayout/InnerLayout';
 
 
 
+const FormBox = styled.div`
+    width: 100%;
+    max-width: 1240px;
+    label: FormBox;
+`
+
+
 
 
 
@@ -28,9 +35,9 @@ class CandidateNew extends Component {
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
-                            <div>
-                                Hola
-                            </div>
+                            <FormBox>
+                                
+                            </FormBox>
                         </InnerLayout>
                     </PannelBackground>
                 </div>
