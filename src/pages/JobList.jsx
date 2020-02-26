@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, } from '@emotion/core';
+import { jsx, Global, css, } from '@emotion/core';
 import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
 import SideBar from '../Layout/SideBar';
@@ -10,7 +10,8 @@ import TitleRow from '../components/ListUtilities/HeaderRow';
 import CheckItem from '../components/ListUtilities/CheckBoxFilter';
 import PaginationLink from '../components/ListUtilities/Pagination';
 import BarCheckBox from '../components/ListUtilities/CheckBoxBar';
-
+import Job from '../img/icons/job.svg'
+import JobGrey from '../img/icons/job-grey.svg'
 import '../css/ListStyles'
 
 
@@ -36,7 +37,7 @@ const RowItem ={
 
 const Titles ={
     Label: 'Functional Title',
-    LabelDescription: 'Company',
+    LabelDescription: 'Job',
     Industry: 'Industry',
     Owner: 'Owner',
     Activity: 'Activity Status',
@@ -57,6 +58,22 @@ class JobList extends Component {
     render() {
         return (
             <Fragment>
+                <Global
+                    styles={css`
+                    /* Changes icon kickAction button  */
+                    .l-filter{
+                        &:last-child {
+                            .l-kick-icon{
+                                background-image: url('${JobGrey}');
+                            }
+                            &:hover{
+                                .l-kick-icon{
+                                    background-image: url('${Job}');
+                                }
+                          }
+                    }
+                    `}
+                />
                 <Layout />
                 <div className="g-container">
                     <SideBar className="g-container__side" />

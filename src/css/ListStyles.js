@@ -1,5 +1,3 @@
-import User from '../img/icons/user.svg'
-import UserGrey from '../img/icons/user-grey.svg'
 import { injectGlobal } from 'emotion'
 
 injectGlobal`
@@ -104,16 +102,6 @@ injectGlobal`
     }
   
 }
-.l-filter{
-    &:last-child {
-        .l-kick-icon{
-            background-image: url('${UserGrey}');
-        }
-        &:hover{
-            .l-kick-icon{
-                background-image: url('${User}');
-            }
-      }
-}
+
 
 `

@@ -9,8 +9,10 @@ import RowContainer from '../components/ListUtilities/RowInfo'
 import TitleRow from '../components/ListUtilities/HeaderRow';
 import CheckItem from '../components/ListUtilities/CheckBoxFilter';
 import PaginationLink from '../components/ListUtilities/Pagination';
-import '../css/ListStyles'
 import BarCheckBox from '../components/ListUtilities/CheckBoxBar';
+import User from '../img/icons/user.svg'
+import UserGrey from '../img/icons/user-grey.svg'
+import '../css/ListStyles'
 
 const Header = {
     TagSection: 'Candidates',
@@ -55,7 +57,18 @@ class CandidateList extends Component {
         return (
             <Fragment>
                 <Global styles={css`
-                    
+                    /* Changes icon kickAction button  */
+                    .l-filter{
+                        &:last-child {
+                            .l-kick-icon{
+                                background-image: url('${UserGrey}');
+                            }
+                            &:hover{
+                                .l-kick-icon{
+                                    background-image: url('${User}');
+                                }
+                          }
+                    }
                     
                 `}
                 />

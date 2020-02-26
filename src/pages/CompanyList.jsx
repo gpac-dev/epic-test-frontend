@@ -11,7 +11,8 @@ import TitleRow from '../components/ListUtilities/HeaderRow';
 import CheckItem from '../components/ListUtilities/CheckBoxFilter';
 import PaginationLink from '../components/ListUtilities/Pagination';
 import BarCheckBox from '../components/ListUtilities/CheckBoxBar';
-
+import Company from '../img/icons/company.svg'
+import CompanyGrey from '../img/icons/company-grey.svg'
 import '../css/ListStyles'
 
 
@@ -19,6 +20,17 @@ const Header = {
     TagSection: 'Companies',
     ButtonTag: 'Add Company +'
 }
+
+const Titles = {
+    Label: 'Name',
+    LabelDescription: 'Industry',
+    Industry: 'Industry',
+    Owner: 'Owner',
+    Activity: 'Fee Agreement',
+    Location: 'Location',
+    Date: 'Added Date',
+}
+
 
 const RowItem = {
     Label: 'A + B Construction',
@@ -33,15 +45,6 @@ const RowItem = {
 
 
 
-const Titles = {
-    Label: 'Nameeee',
-    LabelDescription: 'Industry',
-    Industry: 'Industry',
-    Owner: 'Owner',
-    Activity: 'Fee Agreement',
-    Location: 'Location',
-    Date: 'Added Date',
-}
 
 
 
@@ -78,6 +81,7 @@ class CompanyList extends Component {
             <Fragment>
                 <Global
                     styles={css`
+                    /* Disables PopOver component and sets color by status signed or not signed  */
                     .l-row{
                         &-desc{
                             display: none;
@@ -103,6 +107,18 @@ class CompanyList extends Component {
                             }
                             
                         }
+                    }
+                    /* Changes icon kickAction button  */
+                    .l-filter{
+                        &:last-child {
+                            .l-kick-icon{
+                                background-image: url('${CompanyGrey}');
+                            }
+                            &:hover{
+                                .l-kick-icon{
+                                    background-image: url('${Company}');
+                                }
+                          }
                     }
                 `}
                 />
