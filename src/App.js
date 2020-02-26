@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard'
 import CandidateList from './pages/CandidateList'
 import JobList from './pages/JobList'
+import CompanyList from './pages/CompanyList'
 import './css/Settings'
 
 
@@ -17,6 +18,7 @@ function App() {
             <Route exact path="/Dashboard" component={Dashboard}/>
             <Route exact path="/CandidateList" component={CandidateList}/>
             <Route exact path="/JobList" component={JobList}/>
+            <Route exact path="/CompanyList" component={CompanyList}/>
           </Switch>
       </BrowserRouter>
     );

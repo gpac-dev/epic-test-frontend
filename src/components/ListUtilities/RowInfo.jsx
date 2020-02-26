@@ -28,18 +28,21 @@ const LabelDescription = styled.div`
 max-width: 205px;
 width: 100%;
 margin: 0 5px;
+font-weight: 300;
 `;
 
 const Industry = styled.div`
 max-width: 321px;
 width: 100%;
 margin: 0 5px;
+font-weight: 300;
 `;
 
 const Owner = styled.div`
 max-width: 176px;
 width: 100%;
 margin: 0 5px;
+font-weight: 300;
 `;
 
 const Activity = styled.div`
@@ -58,11 +61,13 @@ const Location = styled.div`
 max-width: 126px;
 width: 100%;
 margin: 0 5px;
+font-weight: 300;
 `;
 
 const Date = styled.div`
 max-width: 128px;
 width: 100%;
+font-weight: 300;
 `;
 
 

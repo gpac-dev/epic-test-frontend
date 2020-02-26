@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css, Global } from '@emotion/core';
+import { jsx, } from '@emotion/core';
 import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
 import SideBar from '../Layout/SideBar';
@@ -7,8 +7,10 @@ import PannelBackground from '../components/PanelBackground';
 import FilterContainer from '../components/ListUtilities/FilterBar';
 import RowContainer from '../components/ListUtilities/RowInfo'
 import TitleRow from '../components/ListUtilities/HeaderRow';
-import CheckFilter from '../components/ListUtilities/CheckBoxFilter';
+import CheckItem from '../components/ListUtilities/CheckBoxFilter';
 import PaginationLink from '../components/ListUtilities/Pagination';
+import BarCheckBox from '../components/ListUtilities/CheckBoxBar';
+
 import '../css/ListStyles'
 
 
@@ -42,21 +44,33 @@ const Titles ={
     Date: 'Added Date',
 }
 
+class Results extends Component {
+    render(){
+        return(
+            <p className="u-auto-left u-Roboto18 u-text-300">Results: <span className="u-text-700">{this.props.NumberCount}</span></p>
+        );
+    }
+}
+
+
 class JobList extends Component {
     render() {
         return (
             <Fragment>
-                <Global styles={css`
-                    
-                    
-                `}
-                />
                 <Layout />
                 <div className="g-container">
                     <SideBar className="g-container__side" />
                     <PannelBackground className="g-container__box">
                         <FilterContainer {...Header} className="l-candidate"/>
-                        <CheckFilter NumberCount='53,457'/>
+                        <BarCheckBox>
+                        <div className="c-flex">
+                                    <CheckItem Checklabel={'Mine'} />
+                                    <CheckItem Checklabel={'In progress'} />
+                                    <CheckItem Checklabel={'In Sendout'} />
+                                    <CheckItem Checklabel={'In Sendover'} />
+                                </div>
+                                <Results NumberCount="45,570"/>
+                        </BarCheckBox>
                         <TitleRow {...Titles}/>
                         <RowContainer className="l-row l-row-process--green" {...RowItem}
                             HeadPop="Added Date"
