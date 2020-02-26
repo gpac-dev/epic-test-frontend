@@ -55,31 +55,6 @@ class CheckItem extends Component {
 
 
 
-const CheckContainer = css`
-max-width: 1731px;
-width: 100%;
-margin: 10px auto;
-display: flex;
-align-items: center;
- 
-
-`
 
 
-class CheckFilter extends Component {
-    render() {
-        return (
-            <div css={CheckContainer}>
-                <div className="c-flex">
-                <CheckItem Checklabel={'Mine'} />
-                <CheckItem Checklabel={'In progress'} />
-                <CheckItem Checklabel={'In Sendout'} />
-                <CheckItem Checklabel={'In Sendover'} />
-                </div>
-                <p className="u-auto-left u-Roboto18 u-text-300">Results: <span className="u-text-700">{this.props.NumberCount}</span></p>
-            </div>
-        );
-    }
-}
-
-export default CheckFilter
+export default CheckItem
