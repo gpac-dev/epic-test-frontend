@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, } from '@emotion/core';
+import { jsx, Global, css } from '@emotion/core';
 import styled from '@emotion/styled'
 import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
@@ -31,6 +31,8 @@ const RowItem = {
     Date: '12/01/20',
 }
 
+
+
 const Titles = {
     Label: 'Nameeee',
     LabelDescription: 'Industry',
@@ -43,7 +45,7 @@ const Titles = {
 
 
 
-
+//Styling Component
 
 const HeadStylesRow = ({ className }) => (
     <TitleRow {...Titles} className={className} />
@@ -54,25 +56,7 @@ const TitlesControls = styled(HeadStylesRow)`
             display: none;
         }
   `
-const RowStyle = ({ className }) => (
-    <RowContainer {...RowItem} className={className} />
-)
 
-const IncrivelRow = styled(RowStyle)`
-        .l-row{
-            &-desc{
-                display: none;
-            }
-            &-activity{
-                >div{
-                    display: none;
-                   }
-                .l-row-activity-circle{
-                    display: none;
-                } 
-            }
-        }
-  `
 
 
 
@@ -90,7 +74,38 @@ class Results extends Component {
 class CompanyList extends Component {
     render() {
         return (
+
             <Fragment>
+                <Global
+                    styles={css`
+                    .l-row{
+                        &-desc{
+                            display: none;
+                        }
+                        &--signed{
+                            .l-row-activity{
+                                color: var(--orange) !important;
+                            }
+                        }
+                        &--notSigned{
+                            .l-row-activity{
+                                color: var(--active) !important;
+                            }
+                        }
+                        &-activity{
+                            .l-row-activity-circle{
+                                display: none !important;
+                            }
+                            &:hover{
+                                > div{
+                                    display: none !important;
+                                }
+                            }
+                            
+                        }
+                    }
+                `}
+                />
                 <Layout />
                 <div className="g-container">
                     <SideBar className="g-container__side" />
@@ -105,29 +120,31 @@ class CompanyList extends Component {
                             <Results NumberCount="45,570" />
                         </BarCheckBox>
                         <TitlesControls />
-                        <IncrivelRow 
-                            className="l-row " {...RowItem}/>
-                        <IncrivelRow
-                            className="l-row " {...RowItem}
+                        <RowContainer {...RowItem}
+                            className="l-row l-row--signed"
+                            Activity="Signed"
                         />
-                        <IncrivelRow
-                            className="l-row " {...RowItem} />
-                        <IncrivelRow
-                            className="l-row" {...RowItem} />
-                        <IncrivelRow
-                            className="l-row " {...RowItem}
-                           
+                        <RowContainer {...RowItem}
+                            className="l-row l-row--notSigned"
+                            Activity="Not Signed"
                         />
-                        <IncrivelRow
-                            className="l-row " {...RowItem} />
-                        <IncrivelRow
-                            className="l-row " {...RowItem} />
-                        <IncrivelRow
-                            className="l-row" {...RowItem} />
-                        <IncrivelRow
-                            className="l-row " {...RowItem}
-                            
+                        <RowContainer {...RowItem}
+                            className="l-row l-row--signed"
+                            Activity="Signed"
                         />
+                        <RowContainer {...RowItem}
+                            className="l-row l-row--notSigned"
+                            Activity="Not Signed"
+                        />
+                        <RowContainer {...RowItem}
+                            className="l-row l-row--notSigned"
+                            Activity="Not Signed"
+                        />
+                        <RowContainer {...RowItem}
+                            className="l-row l-row--signed"
+                            Activity="Signed"
+                        />
+
                         <PaginationLink />
                     </PannelBackground>
                 </div>
