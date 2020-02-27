@@ -50,7 +50,7 @@ TIPOGRAFIA
 .u-Roboto27{font-size:calc(18px + (27 - 18) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto24{font-size:calc(18px + (24 - 18) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto22{font-size:calc(16px + (22 - 16) * ((100vw - 320px) / (1920 - 320)));}
-.u-Roboto18{font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320)));}
+.u-Roboto18{font-size:calc(16px + (18 - 16) * ((100vw - 320px) / (1920 - 320))) !important;}
 .u-Roboto16{font-size:calc(12px + (16 - 12) * ((100vw - 320px) / (1920 - 320)));}
 .u-Roboto14{font-size:calc(12px + (14 - 12) * ((100vw - 320px) / (1920 - 320)));}
 
@@ -60,7 +60,7 @@ TIPOGRAFIA
 /*Peso tipográfico */
 .u-text-300{font-weight: 300;}
 .u-text-400{font-weight: 400;}
-.u-text-500{font-weight: 500;}
+.u-text-500{font-weight: 500 !important;}
 .u-text-700{font-weight: 700;}
 
 
@@ -108,20 +108,30 @@ ESTILOS DE IMÁGEN Y COLOR
 
 
 /*Color */
-.u-white{color: White;}
-.u-dark{color: var(--dark);}
-.u-electric{color: var(--electric);}
-.u-green{color: var(--green);}
 .u-red{color: var(--red)}
+.u-white{color: White;}
+.u-dark{color: var(--dark) !important;}
+.u-blueElectric{color: var(--blueElectric);}
+.u-greenElectric{color: var(--greenElectric);}
+.u-purple{color: var(--purple);}
+.u-grey{color: var(--grey);}
+.u-success{color: var(--success);}
+.u-active{color: var(--active);}
+.u-orange{color: var(--orange);}
 
 
 
 /*Background */
+.u-back-red{background-color: var(--red)}
 .u-back-white{background-color: White;}
 .u-back-dark{background-color: var(--dark);}
-.u-back-electric{background-color: var(--electric);}
-.u-back-green{background-color: var(--green);}
-.u-back-red{background-color: var(--red);}
+.u-back-blueElectric{background-color: var(--blueElectric);}
+.u-back-greenElectric{background-color: var(--greenElectric);}
+.u-back-purple{background-color: var(--purple);}
+.u-back-grey{background-color: var(--grey);}
+.u-back-success{background-color: var(--success);}
+.u-back-active{background-color: var(--active);}
+.u-back-orange{background-color: var(--orange);}
 
 
 
@@ -153,6 +163,7 @@ ESTILOS DE MÁRGENES Y
 
 .u-padding-150{padding: 150px 0px;}
 .u-padding-15{padding: 15px 0px;}
+.u-padding-10{padding: 10px 0px;}
 .u-padding-30{padding: 30px 0px;}
 
 .u-padding-100{padding: 100px 0px;}
