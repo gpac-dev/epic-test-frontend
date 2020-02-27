@@ -12,13 +12,11 @@ const MainContainer = styled.div`
     height: 100%;
     label: MainContainer;
     .l-inner{
-        &Return{
-            width: 5%;
-            height: 100%;
-        }
         &Content{
             width: 95%;
             height: 100%;
+            padding-left: calc(100% / 12 - 105px);
+            padding-right: calc(100% / 12 - 105px);
         }
     }
 
@@ -29,9 +27,6 @@ function InnerLayout(props) {
     return (
       <Fragment>
           <MainContainer className="c-flex">
-                <Return className="l-innerReturn">
-
-                </Return>
                 <InnerContent className="l-innerContent">
                     {props.children}
                 </InnerContent >
