@@ -3,14 +3,8 @@
 import React from 'react';
 import { jsx, Global, css } from '@emotion/core';
 import styled from '@emotion/styled'
+import facepaint from 'facepaint'
 import { Component, Fragment } from 'react';
-import Layout from '../Layout/Layout';
-import SideBar from '../Layout/SideBar';
-import PannelBackground from '../components/PanelBackground';
-import InnerLayout from '../Layout/InnerLayout/InnerLayout';
-import InputFill from '../components/Utilities/TextField'
-import ComboBox from '../components/Utilities/SelectRounded'
-import PointTitle from '../components/NewItemsUtilities/PointTitle';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -20,7 +14,16 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import Layout from '../Layout/Layout';
+import SideBar from '../Layout/SideBar';
+import PannelBackground from '../components/PanelBackground';
+import InnerLayout from '../Layout/InnerLayout/InnerLayout';
+import InputFill from '../components/Utilities/TextField'
+import ComboBox from '../components/Utilities/SelectRounded'
+import PointTitle from '../components/NewItemsUtilities/PointTitle';
 import FileUpload from '../components/Utilities/FileUpload'
+import SuccessButton from '../components/Utilities/ButtonSuccess';
+import CancelButton from '../components/Utilities/ButtonCancel';
 
 
 
@@ -28,10 +31,10 @@ import FileUpload from '../components/Utilities/FileUpload'
 const FormBox = styled.div`
     width: 100%;
     max-width: 1232px;
-    height: 100%;
+    min-height: 100%;
     margin-right: auto;
     label: FormBox;
-    padding-top: 48px;
+    padding: 48px 0;
 `
 
 const HeaderTitle = styled.h1`
@@ -69,6 +72,21 @@ const RelocationRow = css`
        }
    }
 `
+
+
+
+const ActionsButtons = styled.div`
+   display: flex;
+   margin:  100px 0 0;
+   label: actionsButtonSection;
+`
+
+const breakpoints = [576, 768, 992, 1200]
+
+const mq = facepaint(
+    breakpoints.map(bp => `@media (min-width: ${bp}px)`)
+)
+
 
 
 
@@ -242,9 +260,11 @@ class CandidateNew extends Component {
                        }
                     .l-fileContainer{
                         max-width: 444px;
-                        width: 100%;
+                        width: calc(100% / 2);
+                        min-width: 347px;
                             &-inputBox{
                                 margin-left: 67px;
+                                padding-top: 10px;
                             }
                     }
                                                 
@@ -324,6 +344,20 @@ class CandidateNew extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                <ActionsButtons
+                                     css={mq({
+                                        alignItems: ['center', 'center', 'flex-end'],
+                                    })}
+                                >
+                                         <div className="u-block "
+                                            css={mq({
+                                                margin: ['0 auto', '0 auto', '0 0 0 auto'],
+                                            })}
+                                         >
+                                        <CancelButton TextCancel="Cancel" className="u-side10"></CancelButton>
+                                        <SuccessButton TextAction="Save" className="u-side10"></SuccessButton>
+                                    </div>
+                                </ActionsButtons>
                             </FormBox>
                         </InnerLayout>
                     </PannelBackground>

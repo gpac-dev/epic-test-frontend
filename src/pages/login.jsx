@@ -25,6 +25,10 @@ const containerBox = css`
               position: absolute;
               right: 0;
               z-index: 2;
+              &--action{
+                align-self: flex-end;
+                max-width: 376px;
+              }
               
               &-brand{
                 position: absolute;
@@ -58,10 +62,7 @@ const containerBox = css`
                   -moz-appearance: none;
                   font-size: 18px;
                 }
-                &--action{
-                    align-self: flex-end;
-                    max-width: 376px;
-                  }
+               
               }
               &-password {
                 opacity: 0.29;
