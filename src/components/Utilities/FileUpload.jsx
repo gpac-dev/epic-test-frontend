@@ -1,16 +1,26 @@
 /** @jsx jsx */
+import { jsx,css } from '@emotion/core';
 import { useMemo } from "react";
-
-import { jsx } from '@emotion/core';
-//import styled from '@emotion/styled'
-
-
+import fileIcon from '../../img/icons/upload-file-dark.svg'
 import { useDropzone } from "react-dropzone";
+
+
+const LabelText = css `
+   color: #5D626F;
+
+`;
+
+const IconStyle = css`
+    width: 30px; 
+    height: auto;
+    margin-left: auto;
+`;
+
 
 const baseStyle = {
   flex: 1,
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
   padding: "20px",
   height: 56,
@@ -53,14 +63,16 @@ export default function FileUpload(props) {
       ...(isDragAccept ? acceptStyle : {}),
       ...(isDragReject ? rejectStyle : {})
     }),
-    [isDragActive, isDragReject]
+    //[isDragActive, isDragReject]
   );
 
   return (
     <div className="container">
       <div {...getRootProps({ style })}>
         <input {...getInputProps()} />
-        <p className="u-margin-0 u-text-300 u-Roboto18">{props.labelFile}</p>
+        <p css={LabelText} className="u-margin-0 u-text-300 u-Roboto18">{props.labelFile}</p>
+        <img css={IconStyle}
+         src={fileIcon} alt=""/>
       </div>
     </div>
   );

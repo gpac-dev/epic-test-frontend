@@ -53,7 +53,7 @@ const InputContainer = css`
 `
 
 
-const RelocationRow = css `
+const RelocationRow = css`
     min-height: 115px;
     max-width: 940px;
     width: 100%;
@@ -79,7 +79,7 @@ const theme = createMuiTheme({
             // Name of the rule
             colorPrimary: {
                 color: '#4056F4A6',
-                    "&$checked": {
+                "&$checked": {
                     color: '#4056F4'
                 }
             },
@@ -128,63 +128,63 @@ function FormControlLabelPosition() {
 
 
 
-  const ChipsTextField = withStyles({
+const ChipsTextField = withStyles({
     root: {
-      margin: "10px 0",
-      width: "100%",
-      height: '50px',
-      minWidth: '300px',
-      "& label.Mui-focused": {
-        color: "var(--black)",
-        backgroundColor: "#eceef2",
-        padding: "0 15px 0 3px",
-      },
-      "& .MuiInput-underline:after": {
-        borderBottomColor: "#1A1C21"
-      },
-      "& .MuiOutlinedInput-root": {
-        "& fieldset": {
-          borderRadius: "30px"
+        margin: "10px 0",
+        width: "100%",
+        height: '50px',
+        minWidth: '300px',
+        "& label.Mui-focused": {
+            color: "var(--black)",
+            backgroundColor: "#eceef2",
+            padding: "0 15px 0 3px",
         },
-        "&:hover fieldset": {
-          borderColor: "var(--black)",
-          borderWidth: "1px"
+        "& .MuiInput-underline:after": {
+            borderBottomColor: "#1A1C21"
         },
-        "&.Mui-focused fieldset": {
-          borderColor: "var(--black)",
-          borderWidth: "1px"
+        "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+                borderRadius: "30px"
+            },
+            "&:hover fieldset": {
+                borderColor: "var(--black)",
+                borderWidth: "1px"
+            },
+            "&.Mui-focused fieldset": {
+                borderColor: "var(--black)",
+                borderWidth: "1px"
+            }
         }
-      }
     }
-  })(TextField);
-  
-  function Tags() {
+})(TextField);
+
+function Tags() {
     const classes = withStyles();
-  
+
     return (
-      <div className={classes.root}>
-        <Autocomplete
-          multiple
-          id="tags-outlined"
-          options={top100Films}
-          getOptionLabel={option => option.title}
-          defaultValue={[top100Films[13]]}
-          filterSelectedOptions
-          renderInput={params => (
-            <ChipsTextField
-              {...params}
-              variant="outlined"
-              label="Relocation Destinations"
-              placeholder="Favorites"
+        <div className={classes.root}>
+            <Autocomplete
+                multiple
+                id="tags-outlined"
+                options={top100Films}
+                getOptionLabel={option => option.title}
+                defaultValue={[top100Films[13]]}
+                filterSelectedOptions
+                renderInput={params => (
+                    <ChipsTextField
+                        {...params}
+                        variant="outlined"
+                        label="Relocation Destinations"
+                        placeholder="Favorites"
+                    />
+                )}
             />
-          )}
-        />
-      </div>
+        </div>
     );
-  }
-  
-  // Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
-  const top100Films = [
+}
+
+// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+const top100Films = [
     { title: 'The Shawshank Redemption', year: 1994 },
     { title: 'The Godfather', year: 1972 },
     { title: 'The Godfather: Part II', year: 1974 },
@@ -212,8 +212,8 @@ function FormControlLabelPosition() {
     { title: 'The Great Dictator', year: 1940 },
     { title: 'Cinema Paradiso', year: 1988 },
     { title: 'The Lives of Others', year: 2006 },
-   
-  ];
+
+];
 
 
 
@@ -221,7 +221,7 @@ class CandidateNew extends Component {
     render() {
         return (
             <Fragment>
-                <Global styles= {css`
+                <Global styles={css`
                     .u-calc-left{
                         padding-left: calc(100% / 12 - 44px);
                     }
@@ -240,6 +240,13 @@ class CandidateNew extends Component {
                         font-size: 18px;
                         font-weight: 300;
                        }
+                    .l-fileContainer{
+                        max-width: 444px;
+                        width: 100%;
+                            &-inputBox{
+                                margin-left: 67px;
+                            }
+                    }
                                                 
                 `}
                 />
@@ -299,21 +306,23 @@ class CandidateNew extends Component {
                                     </div>
                                 </div>
                                 <div className="c-flex-align-top ">
-                                    <div>
-                                    <PointTitle NameSection="Resume File" SectionNumber="2">
-                                    </PointTitle>
-                                    <div>
-                                        <FileUpload
-                                            labelFile="Select or Drag File"
-                                        ></FileUpload>
+                                    <div className="l-fileContainer">
+                                        <PointTitle NameSection="Resume File" SectionNumber="2">
+                                        </PointTitle>
+                                        <div className="l-fileContainer-inputBox">
+                                            <FileUpload
+                                                labelFile="Select or Drag File"
+                                            ></FileUpload>
+                                        </div>
                                     </div>
+                                    <div className="l-fileContainer">
+                                        <PointTitle NameSection="Blue Sheet" SectionNumber="3"></PointTitle>
+                                        <div className="l-fileContainer-inputBox">
+                                            <FileUpload
+                                                labelFile="Select or Drag File"
+                                            ></FileUpload>
+                                        </div>
                                     </div>
-                                    <div>
-
-                                    <PointTitle NameSection="Blue Sheet" SectionNumber="3"></PointTitle>
-                                    </div>
-                                  
-                                    
                                 </div>
                             </FormBox>
                         </InnerLayout>
