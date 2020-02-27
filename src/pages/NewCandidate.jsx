@@ -1,16 +1,22 @@
 
 /** @jsx jsx */
+import React from 'react';
 import { jsx, Global, css } from '@emotion/core';
 import styled from '@emotion/styled'
 import { Component, Fragment } from 'react';
 import Layout from '../Layout/Layout';
 import SideBar from '../Layout/SideBar';
+import { green, blue } from "@material-ui/core/colors";
 import PannelBackground from '../components/PanelBackground';
 import InnerLayout from '../Layout/InnerLayout/InnerLayout';
 import InputFill from '../components/Utilities/TextField'
 import ComboBox from '../components/Utilities/SelectRounded'
 import PointTitle from '../components/NewItemsUtilities/PointTitle';
-
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
 
 
@@ -40,6 +46,37 @@ const InputContainer = css`
        }
        
 `
+
+function FormControlLabelPosition() {
+    const [value, setValue] = React.useState('female');
+  
+    const handleChange = event => {
+      setValue(event.target.value);
+    };
+  
+    return (
+      <FormControl component="fieldset">
+        <FormLabel component="legend">Relocation</FormLabel>
+        <RadioGroup aria-label="position" name="position" value={value} onChange={handleChange} row>
+         
+          <FormControlLabel
+            value="Yes"
+            control={<Radio color="primary" />}
+            label="Yes"
+            labelPlacement="end"
+          />
+          <FormControlLabel
+            value="No"
+            control={<Radio color="primary" />}
+            label="No"
+            labelPlacement="end"
+          />
+        </RadioGroup>
+      </FormControl>
+    );
+  }
+
+
 
 
 class CandidateNew extends Component {
@@ -97,8 +134,8 @@ class CandidateNew extends Component {
                                                 <InputFill LabelTag="Source URL"> </InputFill>
                                             </div>                     
                                         </div>
-                                        <div>
-
+                                        <div className="c-flex">
+                                        <FormControlLabelPosition></FormControlLabelPosition>
                                         </div>
                                         <div className="c-flex">
                                             <PointTitle  NameSection="Resume File" SectionNumber="2"></PointTitle>
