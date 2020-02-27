@@ -17,10 +17,10 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-//import Chip from '@material-ui/core/Chip';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import FileUpload from '../components/Utilities/FileUpload'
 
 
 
@@ -54,10 +54,11 @@ const InputContainer = css`
 
 
 const RelocationRow = css `
-    height: 115px;
+    min-height: 115px;
     max-width: 940px;
     width: 100%;
     label: RelocationRow;
+    flex-wrap: wrap;
 
    .l-relocation{
        &-radio{
@@ -221,6 +222,9 @@ class CandidateNew extends Component {
         return (
             <Fragment>
                 <Global styles= {css`
+                    .u-calc-left{
+                        padding-left: calc(100% / 12 - 44px);
+                    }
                     .l-radio-check{
                         width: 85px;
                         font-size: 18px;
@@ -247,7 +251,7 @@ class CandidateNew extends Component {
                             <FormBox>
                                 <HeaderTitle className="u-Roboto32 u-upper u-margin-0">New Candidate</HeaderTitle >
                                 <PointTitle NameSection="Personal Data" SectionNumber="1"></PointTitle>
-                                <div className="c-flex-around">
+                                <div className="c-flex-around u-calc-left">
                                     <div css={InputContainer}>
                                         <InputFill LabelTag="First Name"> </InputFill>
                                     </div>
@@ -285,7 +289,7 @@ class CandidateNew extends Component {
                                         <InputFill LabelTag="Source URL"> </InputFill>
                                     </div>
                                 </div>
-                                <div className="c-flex u-side10" css={RelocationRow}>
+                                <div className="c-flex u-side10 u-calc-left" css={RelocationRow}>
                                     <div className="l-relocation-radio">
                                         <FormControlLabelPosition></FormControlLabelPosition>
                                     </div>
@@ -294,9 +298,22 @@ class CandidateNew extends Component {
                                         <Tags></Tags>
                                     </div>
                                 </div>
-                                <div className="c-flex ">
-                                    <PointTitle NameSection="Resume File" SectionNumber="2"></PointTitle>
+                                <div className="c-flex-align-top ">
+                                    <div>
+                                    <PointTitle NameSection="Resume File" SectionNumber="2">
+                                    </PointTitle>
+                                    <div>
+                                        <FileUpload
+                                            labelFile="Select or Drag File"
+                                        ></FileUpload>
+                                    </div>
+                                    </div>
+                                    <div>
+
                                     <PointTitle NameSection="Blue Sheet" SectionNumber="3"></PointTitle>
+                                    </div>
+                                  
+                                    
                                 </div>
                             </FormBox>
                         </InnerLayout>
