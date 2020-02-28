@@ -100,6 +100,10 @@ class CompanyNew extends Component {
                             width: 100%;
                         }
                     }
+                    .l-save-order{
+                        max-width: 280px !important;
+                        padding: 0 30px;
+                    }
                                                 
                 `}
                 />
@@ -190,14 +194,14 @@ class CompanyNew extends Component {
                                         alignItems: ['center', 'center', 'flex-end'],
                                     })}
                                 >
-                                    <div className="u-block "
+                                    <div className="c-flex "
                                         css={mq({
                                             margin: ['0 auto', '0 auto', '0 0 0 auto'],
                                         })}
                                     >
                                         <CancelButton TextCancel="Cancel" className="u-side10"></CancelButton>
                                         <SuccessButton TextAction="Save" className="u-side10"></SuccessButton>
-                                        <SuccessButton TextAction="Save & Add New Job Order" className="u-side10"></SuccessButton>
+                                        <SuccessButton TextAction="Save & Add New Job Order" className="u-side10 l-save-order"></SuccessButton>
 
                                     </div>
                                 </ActionsButtons>
