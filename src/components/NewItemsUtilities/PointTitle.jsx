@@ -4,6 +4,14 @@ import styled from '@emotion/styled'
 import { Component, Fragment } from 'react';
 
 
+const CircleContainer = styled.div`
+    width: 100%;
+    label: pointTitleSection;
+    margin: 20px 0;
+   
+`
+
+
 const DotCircle = css`
 width: 51px;
 height: 51px;
@@ -17,15 +25,8 @@ margin-right: 18px;
 font-size: 26px;
 font-weight: 700;
 justify-content: center;
-
+    
 `
-
-const CircleContainer = styled.div`
-    width: 100%;
-    label: pointTitleSection;
-    margin: 20px 0;
-`
-
 
 class PointTitle extends Component {
     render() {

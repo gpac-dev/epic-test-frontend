@@ -24,6 +24,7 @@ import PointTitle from '../components/NewItemsUtilities/PointTitle';
 import FileUpload from '../components/Utilities/FileUpload'
 import SuccessButton from '../components/Utilities/ButtonSuccess';
 import CancelButton from '../components/Utilities/ButtonCancel';
+import IconHead from '../img/icons/user-grey.svg'
 
 
 
@@ -39,8 +40,18 @@ const FormBox = styled.div`
 
 const HeaderTitle = styled.h1`
 margin-bottom: 57px;
-
+position: relative;
+img{
+    width:100px;
+    height:auto;
+    position:absolute;
+    left: 0;
+    opacity: 0.08;
+    top: -33px;
+}
 `
+
+
 const InputContainer = css`
     max-width: calc(100% / 4 - 20px);
     width: 100%;
@@ -276,7 +287,9 @@ class CandidateNew extends Component {
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
                             <FormBox>
-                                <HeaderTitle className="u-Roboto32 u-upper u-margin-0">New Candidate</HeaderTitle >
+                                <HeaderTitle className="u-Roboto32 u-upper u-margin-0">New Candidate
+                                <img src={IconHead} alt=""/>
+                                </HeaderTitle >
                                 <PointTitle NameSection="Personal Data" SectionNumber="1"></PointTitle>
                                 <div className="c-flex-around u-calc-left">
                                     <div css={InputContainer}>
