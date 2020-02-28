@@ -129,8 +129,12 @@ class NewJobOrder extends Component {
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
                             <FormBox>
-                                <HeaderTitle className="u-Roboto32 u-upper u-margin-0">New Job Order</HeaderTitle >
-                                <PointTitle NameSection="Datos" SectionNumber="1"></PointTitle>
+                                <HeaderTitle 
+                                className="u-Roboto32 u-upper u-margin-0">New Job Order
+                                </HeaderTitle >
+                                <PointTitle 
+                                 smallText="Required"
+                                NameSection="Datos" SectionNumber="1"></PointTitle>
                                 <div className="c-flex-start u-calc-left">
                                     <div css={InputContainer}>
                                         <InputFill LabelTag="Company *"> </InputFill>
@@ -167,7 +171,9 @@ class NewJobOrder extends Component {
                                         <InputFill LabelTag="ZIP" className="u-opacity5"> </InputFill>
                                     </div>
                                 </div>
-                                <PointTitle NameSection="Hiring Authority" SectionNumber="2">
+                                <PointTitle 
+                                smallText="Required"
+                                NameSection="Hiring Authority" SectionNumber="2">
                                 </PointTitle>
                                 <div className="c-flex-start u-calc-left">
                                     <div css={InputHiring}>
@@ -176,7 +182,9 @@ class NewJobOrder extends Component {
                                     </div>
                                 <div className="c-flex-align-top ">
                                     <div className="l-fileContainer">
-                                        <PointTitle NameSection="White Sheet" SectionNumber="3">
+                                        <PointTitle 
+                                        smallText="Required"
+                                        NameSection="White Sheet" SectionNumber="3">
                                         </PointTitle>
                                         <div className="l-fileContainer-inputBox">
                                             <FileUpload
@@ -185,7 +193,10 @@ class NewJobOrder extends Component {
                                         </div>
                                     </div>
                                     <div className="l-fileContainer">
-                                        <PointTitle NameSection="Job Description" SectionNumber="4"></PointTitle>
+                                        <PointTitle 
+                                        smallText="Option"
+                                        NameSection="Job Description" 
+                                        SectionNumber="4"></PointTitle>
                                         <div className="l-fileContainer-inputBox">
                                             <FileUpload
                                                 labelFile="Select or Drag File"

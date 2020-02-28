@@ -179,6 +179,8 @@ class CompanyNew extends Component {
                                     >
                                         <CancelButton TextCancel="Cancel" className="u-side10"></CancelButton>
                                         <SuccessButton TextAction="Save" className="u-side10"></SuccessButton>
+                                        <SuccessButton TextAction="Save & Add New Job Order" className="u-side10"></SuccessButton>
+
                                     </div>
                                 </ActionsButtons>
                             </FormBox>

@@ -23,6 +23,7 @@ justify-content: center;
 const CircleContainer = styled.div`
     width: 100%;
     label: pointTitleSection;
+    margin: 20px 0;
 `
 
 
@@ -34,7 +35,10 @@ class PointTitle extends Component {
                     <div css={DotCircle}>
                         {this.props.SectionNumber}
                     </div>
-                    <h2 className="u-Roboto30 u-upper u-text-700">{this.props.NameSection}</h2>
+                    <div>
+                        <h2 className="u-Roboto30 u-upper u-text-700 u-margin-0">{this.props.NameSection}</h2>
+                        <small className="u-margin-0 u-text-300">{this.props.smallText}</small>
+                    </div>
                 </CircleContainer>
             </Fragment>
         );
