@@ -71,7 +71,12 @@ class JobList extends Component {
                                     background-image: url('${Job}');
                                 }
                           }
+                          .css-1267yeu{
+                              margin-left: auto;
+                          }
                     }
+                 
+                       
                     `}
                 />
                 <Layout />

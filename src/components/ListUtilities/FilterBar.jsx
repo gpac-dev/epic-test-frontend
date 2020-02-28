@@ -8,6 +8,7 @@ const FilterLayout = css`
     min-height: 97px;
     max-width: 1731px;
     margin: auto;
+    padding-top: 60px;
     h1{
         text-transform: uppercase;
         font-size:calc(20px + (32 - 20) * ((100vw - 320px) / (1920 - 320)));

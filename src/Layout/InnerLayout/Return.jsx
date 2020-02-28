@@ -1,7 +1,7 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 import styled from '@emotion/styled'
-import { Component, Fragment } from 'react';
+import { Component } from 'react';
 import ReturnIcon from '../../img/icons/Return.svg'
 import ReturnIconHover from '../../img/icons/RowArrow-Hover.svg'
 
