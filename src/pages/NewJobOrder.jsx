@@ -15,6 +15,7 @@ import FileUpload from '../components/Utilities/FileUpload'
 import SuccessButton from '../components/Utilities/ButtonSuccess';
 import CancelButton from '../components/Utilities/ButtonCancel';
 import CheckItem from '../components/ListUtilities/CheckBoxFilter';
+import IconHead from '../img/icons/job-grey.svg'
 
 
 
@@ -30,8 +31,19 @@ const FormBox = styled.div`
 
 const HeaderTitle = styled.h1`
 margin-bottom: 57px;
-
+position: relative;
+img{
+    width:100px;
+    height:auto;
+    position:absolute;
+    left: 0;
+    opacity: 0.08;
+    top: -33px;
+}
 `
+
+
+
 const InputContainer = css`
     max-width: calc(100% / 4 - 20px);
     width: 100%;
@@ -131,6 +143,7 @@ class NewJobOrder extends Component {
                             <FormBox>
                                 <HeaderTitle 
                                 className="u-Roboto32 u-upper u-margin-0">New Job Order
+                                <img src={IconHead} alt=""/>
                                 </HeaderTitle >
                                 <PointTitle 
                                  smallText="Required"
