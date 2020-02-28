@@ -14,6 +14,7 @@ import PointTitle from '../components/NewItemsUtilities/PointTitle';
 import FileUpload from '../components/Utilities/FileUpload'
 import SuccessButton from '../components/Utilities/ButtonSuccess';
 import CancelButton from '../components/Utilities/ButtonCancel';
+import CheckItem from '../components/ListUtilities/CheckBoxFilter';
 
 
 
@@ -44,6 +45,21 @@ const InputContainer = css`
        }
        
 `
+
+const InputHiring = css`
+    max-width: 580px;
+    width: 100%;
+    min-width: 250px;
+    align-self: center;
+    border-radius: 30px;
+    margin: 10px;
+    label: containerInput;
+    .PrivateNotchedOutline-root-166 {
+        border-radius: 30px;
+       }
+       
+`
+
 
 
 
@@ -89,7 +105,22 @@ class NewJobOrder extends Component {
                             width: 100%;
                         }
                     }
-                                                
+                    .MuiTypography-root {
+                        width: 190px;
+                       }
+                       fieldset.MuiFormControl-root {
+                        display: flex;
+                        justify-content: center;
+                       }      
+                       .l-fileContainer{
+                        max-width: 444px;
+                        width: calc(100% / 2);
+                        min-width: 347px;
+                            &-inputBox{
+                                margin-left: 67px;
+                                padding-top: 10px;
+                            }
+                    }                                           
                 `}
                 />
                 <Layout />
@@ -124,6 +155,8 @@ class NewJobOrder extends Component {
                                     </div>
                                 </div>
                                 <div className="c-flex-start u-calc-left">
+                                    <CheckItem Checklabel="Use a different location than company"
+                                    ></CheckItem>
                                     <div css={InputContainer}>
                                         <InputFill LabelTag="State" className="u-opacity5"> </InputFill>
                                     </div>
@@ -133,38 +166,30 @@ class NewJobOrder extends Component {
                                     <div css={InputContainer}>
                                         <InputFill LabelTag="ZIP" className="u-opacity5"> </InputFill>
                                     </div>
-                                 </div>
-                                <div className="l-fileContainer">
-                                    <PointTitle NameSection="Hiring Authority" SectionNumber="2">
-                                    </PointTitle>
-                                    <div className="c-flex-start u-calc-left">
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="First Name"> </InputFill>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Last Name"> </InputFill>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Title"> </InputFill>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Phone"> </InputFill>
-                                        </div>
-                                        <div css={InputContainer}>
-                                            <InputFill LabelTag="Email" > </InputFill>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div className="l-fileContainer">
-                                    <PointTitle NameSection="White Sheet" SectionNumber="3"></PointTitle>
-                                    <div className="c-flex">
+                                <PointTitle NameSection="Hiring Authority" SectionNumber="2">
+                                </PointTitle>
+                                <div className="c-flex-start u-calc-left">
+                                    <div css={InputHiring}>
+                                        <ComboBox LabelSelect='Select Hiring Authority'></ComboBox>
+                                    </div>
+                                    </div>
+                                <div className="c-flex-align-top ">
+                                    <div className="l-fileContainer">
+                                        <PointTitle NameSection="White Sheet" SectionNumber="3">
+                                        </PointTitle>
                                         <div className="l-fileContainer-inputBox">
                                             <FileUpload
                                                 labelFile="Select or Drag File"
                                             ></FileUpload>
                                         </div>
-                                        <div>
-                                            <p className="u-text-300 u-Roboto18 l-feeeAg-text ">You can upload this later, but it will be needed to create Any sendout related to this company</p>
+                                    </div>
+                                    <div className="l-fileContainer">
+                                        <PointTitle NameSection="Job Description" SectionNumber="4"></PointTitle>
+                                        <div className="l-fileContainer-inputBox">
+                                            <FileUpload
+                                                labelFile="Select or Drag File"
+                                            ></FileUpload>
                                         </div>
                                     </div>
                                 </div>

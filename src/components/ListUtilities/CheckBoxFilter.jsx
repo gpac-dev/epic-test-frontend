@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import { Component } from 'react';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -24,6 +24,7 @@ const theme = createMuiTheme({
         },
         MuiFormControlLabel:{
             label:{
+                marginLeft: 0,
                 fontSize: '18px',
                 fontWeight: '300'
             }
@@ -31,6 +32,10 @@ const theme = createMuiTheme({
     },
 });
 
+
+const InputOverride = css`
+    margin-left: 0 !important ;
+`
 
 
 class CheckItem extends Component {
@@ -44,6 +49,7 @@ class CheckItem extends Component {
                             control={<Checkbox color="primary" />}
                             label={this.props.Checklabel}
                             labelPlacement="end"
+                            css={InputOverride}
                         />
                     </FormGroup>
                 </FormControl>
