@@ -16,6 +16,7 @@ import SuccessButton from '../components/Utilities/ButtonSuccess';
 import CancelButton from '../components/Utilities/ButtonCancel';
 import CheckItem from '../components/ListUtilities/CheckBoxFilter';
 import IconHead from '../img/icons/job-grey.svg'
+import Return from '../Layout/InnerLayout/Return';
 
 
 
@@ -141,13 +142,16 @@ class NewJobOrder extends Component {
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
                             <FormBox>
-                                <HeaderTitle 
-                                className="u-Roboto32 u-upper u-margin-0">New Job Order
-                                <img src={IconHead} alt=""/>
-                                </HeaderTitle >
-                                <PointTitle 
-                                 smallText="Required"
-                                NameSection="Datos" SectionNumber="1"></PointTitle>
+                                <div className="c-flex ">
+                                    <Return></Return>
+                                    <HeaderTitle
+                                        className="u-Roboto32 u-upper u-margin-0">New Job Order
+                                <img src={IconHead} alt="" />
+                                    </HeaderTitle >
+                                </div>
+                                <PointTitle
+                                    smallText="Required"
+                                    NameSection="Datos" SectionNumber="1"></PointTitle>
                                 <div className="c-flex-start u-calc-left">
                                     <div css={InputContainer}>
                                         <InputFill LabelTag="Company *"> </InputFill>
@@ -184,20 +188,20 @@ class NewJobOrder extends Component {
                                         <InputFill LabelTag="ZIP" className="u-opacity5"> </InputFill>
                                     </div>
                                 </div>
-                                <PointTitle 
-                                smallText="Required"
-                                NameSection="Hiring Authority" SectionNumber="2">
+                                <PointTitle
+                                    smallText="Required"
+                                    NameSection="Hiring Authority" SectionNumber="2">
                                 </PointTitle>
                                 <div className="c-flex-start u-calc-left">
                                     <div css={InputHiring}>
                                         <ComboBox LabelSelect='Select Hiring Authority'></ComboBox>
                                     </div>
-                                    </div>
+                                </div>
                                 <div className="c-flex-align-top ">
                                     <div className="l-fileContainer">
-                                        <PointTitle 
-                                        smallText="Required"
-                                        NameSection="White Sheet" SectionNumber="3">
+                                        <PointTitle
+                                            smallText="Required"
+                                            NameSection="White Sheet" SectionNumber="3">
                                         </PointTitle>
                                         <div className="l-fileContainer-inputBox">
                                             <FileUpload
@@ -206,10 +210,10 @@ class NewJobOrder extends Component {
                                         </div>
                                     </div>
                                     <div className="l-fileContainer">
-                                        <PointTitle 
-                                        smallText="Option"
-                                        NameSection="Job Description" 
-                                        SectionNumber="4"></PointTitle>
+                                        <PointTitle
+                                            smallText="Option"
+                                            NameSection="Job Description"
+                                            SectionNumber="4"></PointTitle>
                                         <div className="l-fileContainer-inputBox">
                                             <FileUpload
                                                 labelFile="Select or Drag File"

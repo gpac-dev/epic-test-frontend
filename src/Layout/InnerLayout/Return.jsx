@@ -1,23 +1,64 @@
 /** @jsx jsx */
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 import styled from '@emotion/styled'
 import { Component, Fragment } from 'react';
+import ReturnIcon from '../../img/icons/Return.svg'
+import ReturnIconHover from '../../img/icons/RowArrow-Hover.svg'
+
+
+const BoxArrow = css`
+    width: 56px;
+    height: 32px;
+`
 
 
 const ReturnContainer = styled.div`
-    width: 100%;
     label: returnContainer;
+    width: 100%;
+    height: 100%;
+    position:relative;
+    .l-return{
+        &-main{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            transition: .5s ease-in-out;
+            transform: scale(1);
+        }
+        &-hover{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top:0;
+            opacity:0;
+            transform: scale(.9);
+            transition: .5s ease-in-out;
+            transition-delay: .2s;
+        }
+   }
+   &:hover{
+    .l-return-main{
+        transform: scale(.7);
+        opacity: 0.5;
+    }
+    .l-return-hover{
+        opacity:1;
+        transform: scale(1.2);
+    }
+}
 `
 
 
 class Return extends Component {
     render(){
         return(
-            <Fragment>
+            <div className={this.props.className} css={BoxArrow}>
                 <ReturnContainer className={this.props.className}>
-
+                    <img src={ReturnIcon}  className="l-return-main" alt=""/>
+                    <img src={ReturnIconHover} className="l-return-hover" alt=""/>
                 </ReturnContainer>
-            </Fragment>
+            </div>
         );
     }
 }
