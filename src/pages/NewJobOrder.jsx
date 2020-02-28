@@ -33,6 +33,7 @@ const FormBox = styled.div`
 const HeaderTitle = styled.h1`
 margin-bottom: 57px;
 position: relative;
+margin-left: 10px;
 img{
     width:100px;
     height:auto;
@@ -142,7 +143,7 @@ class NewJobOrder extends Component {
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
                             <FormBox>
-                                <div className="c-flex ">
+                                <div className="c-flex-align-top">
                                     <Return></Return>
                                     <HeaderTitle
                                         className="u-Roboto32 u-upper u-margin-0">New Job Order

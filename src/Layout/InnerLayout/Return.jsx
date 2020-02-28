@@ -6,9 +6,10 @@ import ReturnIcon from '../../img/icons/Return.svg'
 import ReturnIconHover from '../../img/icons/RowArrow-Hover.svg'
 
 
-const BoxArrow = css`
+const BoxArrow = styled.div`
     width: 56px;
     height: 32px;
+    margin-top: 8px;
 `
 
 
@@ -53,12 +54,12 @@ const ReturnContainer = styled.div`
 class Return extends Component {
     render(){
         return(
-            <div className={this.props.className} css={BoxArrow}>
+            <BoxArrow className={this.props.className} >
                 <ReturnContainer className={this.props.className}>
                     <img src={ReturnIcon}  className="l-return-main" alt=""/>
                     <img src={ReturnIconHover} className="l-return-hover" alt=""/>
                 </ReturnContainer>
-            </div>
+            </BoxArrow>
         );
     }
 }

@@ -15,6 +15,7 @@ import FileUpload from '../components/Utilities/FileUpload'
 import SuccessButton from '../components/Utilities/ButtonSuccess';
 import CancelButton from '../components/Utilities/ButtonCancel';
 import IconHead from '../img/icons/company-grey.svg'
+import Return from '../Layout/InnerLayout/Return';
 
 
 
@@ -30,6 +31,7 @@ const FormBox = styled.div`
 const HeaderTitle = styled.h1`
 margin-bottom: 57px;
 position: relative;
+margin-left: 10px;
 img{
     width:100px;
     height:auto;
@@ -107,11 +109,14 @@ class CompanyNew extends Component {
                     <PannelBackground className="g-container__box">
                         <InnerLayout>
                             <FormBox>
-                                <HeaderTitle 
-                                className="u-Roboto32 u-upper u-margin-0">New Company
-                                <img src={IconHead} alt=""/>
-
+                            <div className="c-flex-align-top">
+                                    <Return></Return>
+                                    <HeaderTitle 
+                                    className="u-Roboto32 u-upper u-margin-0">New Company
+                                     <img src={IconHead} alt=""/>
                                 </HeaderTitle >
+                                </div>
+                                
                                 <PointTitle NameSection="Contact Data" SectionNumber="1"></PointTitle>
                                 <div className="c-flex-start u-calc-left">
                                     <div css={InputContainer}>
