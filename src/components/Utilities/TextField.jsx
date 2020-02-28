@@ -39,10 +39,10 @@ class InputFill extends React.Component {
         <CssTextField
         required={this.props.required}
         helperText={this.props.helper}
-          className={classes.margin}
+          className={[classes.margin, this.props.className]}
           label={this.props.LabelTag}
           variant="outlined"
-          id="custom-css-outlined-input"
+          id={"custom-css-outlined-input"}
         />
       </div>
     );

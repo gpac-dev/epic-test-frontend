@@ -119,6 +119,11 @@ ESTILOS DE IMÁGEN Y COLOR
 .u-active{color: var(--active);}
 .u-orange{color: var(--orange);}
 
+.u-opacity1{opacity: 1;}
+.u-opacity5{opacity: .5;}
+.u-opacity3{opacity: .3;}
+.u-opacity0{opacity: 0;}
+
 
 
 /*Background */

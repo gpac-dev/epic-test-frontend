@@ -8,6 +8,7 @@ import CompanyList from './pages/CompanyList'
 import './css/Settings'
 import CandidateNew from './pages/NewCandidate';
 import CompanyNew from './pages/NewCompany';
+import NewJobOrder from './pages/NewJobOrder';
 
 
 
@@ -23,6 +24,7 @@ function App() {
             <Route exact path="/CompanyList" component={CompanyList}/>
             <Route exact path="/NewCandidate" component={CandidateNew}/>
             <Route exact path="/NewCompany" component={CompanyNew}/>
+            <Route exact path="/NewJobOrder" component={NewJobOrder}/>
           </Switch>
       </BrowserRouter>
     );
